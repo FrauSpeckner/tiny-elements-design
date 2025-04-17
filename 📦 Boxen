@@ -95,22 +95,37 @@ max-width: 90%;
 }
 
 /* Responsive Design für Mobile */
-@media screen (max-width: 480px) {
+
+@media screen and (max-width: 480px) {
   .elements-boxes {
     font-size: 14px;
-    padding: 20px 12px 24px; 
+    padding: 20px 12px 24px 12px;
+    text-align: left;
+    position: relative;
   }
+
   .elements-boxes::before {
+    content: "";
     width: 50px;
     height: 50px;
     top: -25px;
     left: 50%;
     right: auto;
     transform: translateX(-50%) rotate(15deg);
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
   }
+
   .elements-boxes.elements-boxes-tip::before,
   .elements-boxes.elements-boxes-problem::before,
-  .elements-boxes.elements-boxes-task::before {
+  .elements-boxes.elements-boxes-task::before,
+  .elements-boxes.elements-boxes-scenario::before,
+  .elements-boxes.elements-boxes-do::before,
+  .elements-boxes.elements-boxes-dontdo::before,
+  .elements-boxes.elements-boxes-feedback::before {
     width: 45px;
     height: 45px;
     top: -20px;
