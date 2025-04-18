@@ -8,34 +8,35 @@
       <displayorder>2</displayorder>
       <css></css>
       <timecreated>1728793848</timecreated>
-      <timemodified>1740074195</timemodified>
+      <timemodified>1744910691</timemodified>
     </row>
     <row>
       <id>2</id>
       <name>sketchpals</name>
       <displayname>🧰 Arbeit</displayname>
       <displayorder>1</displayorder>
-      <css>.elements-sketchpals-box {
+      <css>/* ========== GRUNDSTIL ========== */
+.elements-sketchpals-box {
   border-radius: 20px;
   border: 2px solid #e0e0e0;
-  padding: 40px;
-  margin: 60px 0;
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
-  font-family: "Inter", sans-serif;
-  font-size: 20px;
+  padding: 60px 16px 24px 24px; /* Oben extra viel Platz fürs Icon */
+  margin: 50px auto;
+  max-width: 90%;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  font-family: "Arial", sans-serif;
+  font-size: 18px;
   position: relative;
-  max-width: 85%;
-  margin-left: auto;
-  margin-right: auto;
-  background: #ffffff;
+  background-color: #ffffff;
   box-sizing: border-box;
-  text-align: left;
-  display: flex;
-  align-items: center;
-  gap: 14px;
+  text-align: left; /* Wichtig für den Editor */
   overflow: visible;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
 }
 
+/* ========== ICON OBEN ========== */
 .elements-sketchpals-box::before {
   content: "";
   width: 120px;
@@ -52,41 +53,53 @@
   z-index: 10;
 }
 
+/* ========== HEADINGS ========== */
+.elements-sketchpals-box h1,
+.elements-sketchpals-box h2,
+.elements-sketchpals-box h3,
+.elements-sketchpals-box h4,
+.elements-sketchpals-box h5,
+.elements-sketchpals-box h6 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  text-align: left; /* Auch für Editor */
+}
 
+/* ========== ABSÄTZE ========== */
 .elements-sketchpals-box p {
   margin: 0;
+  padding: 0;
   font-size: 1.2rem;
   color: #2c3e50;
-  flex-grow: 1;
+  line-height: 1.5;
   text-align: left;
-  padding-right: 140px; /* Space for icon */
 }
 
-/* Responsive Design */
-@media screen (max-width: 1024px) {
-  .elements-sketchpals-box {
-    font-size: 18px;
-    padding: 30px;
-  }
-  .elements-sketchpals-box::before {
-    width: 100px;
-    height: 100px;
-    top: -50px;
-    right: -20px;
-  }
-  .elements-sketchpals-box p {
-    padding-right: 100px;
-  }
+/* ========== &lt;br&gt; mit NULL Abstand ========== */
+.elements-sketchpals-box br {
+  display: block;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  height: 0;
 }
 
-@media screen (max-width: 768px) {
+/* ========== Leere &lt;p&gt; ausblenden ========== */
+.elements-sketchpals-box p:empty,
+.elements-sketchpals-box p:has(br:only-child),
+.elements-sketchpals-box p:has(span:empty) {
+  display: none;
+}
+
+/* ========== RESPONSIVE ========== */
+@media screen and (max-width: 768px) {
   .elements-sketchpals-box {
     font-size: 16px;
-    padding: 24px;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    padding: 60px 14px 20px; /* oben viel Platz, unten etwas weniger */
+    align-items: flex-start; /* NICHT zentrieren */
+    text-align: left;
   }
+
   .elements-sketchpals-box::before {
     width: 100px;
     height: 100px;
@@ -95,28 +108,28 @@
     left: 50%;
     transform: translateX(-50%);
   }
-  .elements-sketchpals-box p {
-    padding-right: 0;
-    padding-top: 40px;
-  }
 }
 
-@media screen (max-width: 480px) {
+@media screen and (max-width: 480px) {
   .elements-sketchpals-box {
     font-size: 14px;
-    padding: 20px;
+    padding: 60px 12px 18px; /* oben Abstand fürs Icon */
+    text-align: left;
+    align-items: flex-start;
   }
+
   .elements-sketchpals-box::before {
     width: 90px;
     height: 90px;
     top: -40px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
   }
-  .elements-sketchpals-box p {
-    padding-top: 30px;
-  }
-}</css>
+}
+</css>
       <timecreated>1727103659</timecreated>
-      <timemodified>1741211778</timemodified>
+      <timemodified>1744959364</timemodified>
     </row>
     <row>
       <id>3</id>
@@ -2557,16 +2570,16 @@ border-radius: 5px;
   font-size: 32px;
   font-weight: 900;
   text-align: center;
-  background: #f5f5f5; /* Leicht dunkler als weiß für subtile Differenz */
+  background: #f5f5f5; 
   color: #1B263B;
-  box-shadow: none; /* Kein 3D, bleibt flach */
+  box-shadow: none; 
   position: relative;
   max-width: 95%;
   box-sizing: border-box;
   text-transform: uppercase;
   letter-spacing: 1.2px;
-  border: 3px solid #b0b0b0; /* Dunklere Border für mehr Kontrast */
-  border-bottom: 6px solid #666666; /* Stärkere untere Linie für mehr Gewicht */
+  border: 3px solid #b0b0b0; 
+  border-bottom: 6px solid #666666; 
 }
 
 /* Mobile Anpassungen */
@@ -2588,7 +2601,7 @@ border-radius: 5px;
       <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/1/Hi123.svg</iconurl>
       <hideforstudents>0</hideforstudents>
       <timecreated>1728836302</timecreated>
-      <timemodified>1741211249</timemodified>
+      <timemodified>1744884209</timemodified>
     </row>
     <row>
       <id>41</id>
@@ -4409,12 +4422,6 @@ border: 2px solid #b5b5b5;
       <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Titel.svg</iconurl>
     </row>
     <row>
-      <id>101</id>
-      <componentname>just-boxes-title</componentname>
-      <flavorname>justboxes1</flavorname>
-      <iconurl></iconurl>
-    </row>
-    <row>
       <id>102</id>
       <componentname>sketchpals-feedback</componentname>
       <flavorname>feedback-questions</flavorname>
@@ -5470,6 +5477,12 @@ border: 2px solid #b5b5b5;
       <flavorname>community</flavorname>
       <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Fb.svg</iconurl>
     </row>
+    <row>
+      <id>278</id>
+      <componentname>just-boxes-title</componentname>
+      <flavorname>justboxes1</flavorname>
+      <iconurl></iconurl>
+    </row>
   </tiny_elements_comp_flavor>
   <tiny_elements_flavor>
     <row>
@@ -6095,7 +6108,6 @@ background-image: url('@@PLUGINFILE@@/1/tiny_elements/images/4/Spain1-szenario.s
       <content></content>
       <css>/* Tips &amp; Cautions */
 .elements-sketchpals-dontdo::before {
-  background-color: red;
   background-image: url('@@PLUGINFILE@@/1/tiny_elements/images/2/%20%20C222.svg');
 }
 .elements-sketchpals-do::before {
@@ -6128,7 +6140,7 @@ background-image: url('@@PLUGINFILE@@/1/tiny_elements/images/4/Spain1-szenario.s
 </css>
       <hideforstudents>0</hideforstudents>
       <timecreated>1728718475</timecreated>
-      <timemodified>1744894785</timemodified>
+      <timemodified>1739372883</timemodified>
     </row>
     <row>
       <id>15</id>
@@ -7069,33 +7081,48 @@ max-width: 90%;
   }
 }
 
-/* Responsive Design für Mobile */
-@media screen (max-width: 480px) {
+
+@media screen and (max-width: 480px) {
   .elements-boxes {
     font-size: 14px;
-    padding: 20px 12px 24px; 
+    padding: 20px 12px 24px 12px;
+    text-align: left;
+    position: relative;
   }
+
   .elements-boxes::before {
+    content: "";
     width: 50px;
     height: 50px;
     top: -25px;
     left: 50%;
     right: auto;
     transform: translateX(-50%) rotate(15deg);
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
   }
+
   .elements-boxes.elements-boxes-tip::before,
   .elements-boxes.elements-boxes-problem::before,
-  .elements-boxes.elements-boxes-task::before {
+  .elements-boxes.elements-boxes-task::before,
+  .elements-boxes.elements-boxes-scenario::before,
+  .elements-boxes.elements-boxes-do::before,
+  .elements-boxes.elements-boxes-dontdo::before,
+  .elements-boxes.elements-boxes-feedback::before {
     width: 45px;
     height: 45px;
     top: -20px;
     left: 50%;
     transform: translateX(-50%) rotate(0deg);
   }
-}</css>
+}
+</css>
       <hideforstudents>0</hideforstudents>
       <timecreated>1739428474</timecreated>
-      <timemodified>1741205043</timemodified>
+      <timemodified>1744885419</timemodified>
     </row>
     <row>
       <id>35</id>
