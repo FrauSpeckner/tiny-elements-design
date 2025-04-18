@@ -15,28 +15,27 @@
       <name>sketchpals</name>
       <displayname>🧰 Arbeit</displayname>
       <displayorder>1</displayorder>
-      <css>/* ========== GRUNDSTIL ========== */
+      <css>
+/* ========== GRUNDSTIL ========== */
 .elements-sketchpals-box {
   border-radius: 20px;
   border: 2px solid #e0e0e0;
-  padding: 60px 16px 24px 24px; /* Oben extra viel Platz fürs Icon */
-  margin: 50px auto;
+  padding: 40px 16px 24px 24px; /* Weniger oben, damit Text höher sitzt */
+  margin: 50px auto 80px auto;
   max-width: 90%;
+  background-color: #ffffff;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
   font-family: "Arial", sans-serif;
   font-size: 18px;
   position: relative;
-  background-color: #ffffff;
   box-sizing: border-box;
-  text-align: left; /* Wichtig für den Editor */
-  overflow: visible;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
   display: flex;
   flex-direction: column;
   gap: 0.75em;
 }
 
-/* ========== ICON OBEN ========== */
+/* ========== ICON RECHTS OBEN ========== */
 .elements-sketchpals-box::before {
   content: "";
   width: 120px;
@@ -47,8 +46,6 @@
   position: absolute;
   top: -60px;
   right: -30px;
-  flex-shrink: 0;
-  transform: scale(1.1);
   opacity: 0.9;
   z-index: 10;
 }
@@ -62,7 +59,7 @@
 .elements-sketchpals-box h6 {
   margin-top: 0;
   margin-bottom: 0.5em;
-  text-align: left; /* Auch für Editor */
+  text-align: left;
 }
 
 /* ========== ABSÄTZE ========== */
@@ -75,28 +72,26 @@
   text-align: left;
 }
 
-/* ========== &lt;br&gt; mit NULL Abstand ========== */
+/* ========== &lt;br&gt; ohne Abstand ========== */
 .elements-sketchpals-box br {
   display: block;
+  height: 0;
   line-height: 1;
   margin: 0;
   padding: 0;
-  height: 0;
 }
 
-/* ========== Leere &lt;p&gt; ausblenden ========== */
+/* ========== Leere Absätze ausblenden ========== */
 .elements-sketchpals-box p:empty,
 .elements-sketchpals-box p:has(br:only-child),
 .elements-sketchpals-box p:has(span:empty) {
   display: none;
 }
-
-/* ========== RESPONSIVE ========== */
 @media screen and (max-width: 768px) {
   .elements-sketchpals-box {
     font-size: 16px;
-    padding: 60px 14px 20px; /* oben viel Platz, unten etwas weniger */
-    align-items: flex-start; /* NICHT zentrieren */
+    padding: 40px 14px 20px;
+    align-items: flex-start;
     text-align: left;
   }
 
@@ -104,8 +99,8 @@
     width: 100px;
     height: 100px;
     top: -50px;
-    right: auto;
     left: 50%;
+    right: auto;
     transform: translateX(-50%);
   }
 }
@@ -113,7 +108,7 @@
 @media screen and (max-width: 480px) {
   .elements-sketchpals-box {
     font-size: 14px;
-    padding: 60px 12px 18px; /* oben Abstand fürs Icon */
+    padding: 40px 12px 18px;
     text-align: left;
     align-items: flex-start;
   }
@@ -129,7 +124,7 @@
 }
 </css>
       <timecreated>1727103659</timecreated>
-      <timemodified>1744959364</timemodified>
+      <timemodified>1744966276</timemodified>
     </row>
     <row>
       <id>3</id>
