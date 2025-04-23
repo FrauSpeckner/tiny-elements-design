@@ -8,34 +8,33 @@
       <displayorder>2</displayorder>
       <css></css>
       <timecreated>1728793848</timecreated>
-      <timemodified>1744910691</timemodified>
+      <timemodified>1740074195</timemodified>
     </row>
     <row>
       <id>2</id>
       <name>sketchpals</name>
       <displayname>🧰 Arbeit</displayname>
       <displayorder>1</displayorder>
-      <css>
-/* ========== GRUNDSTIL ========== */
-.elements-sketchpals-box {
+      <css>.elements-sketchpals-box {
   border-radius: 20px;
   border: 2px solid #e0e0e0;
-  padding: 40px 16px 24px 24px; /* Weniger oben, damit Text höher sitzt */
-  margin: 50px auto 80px auto;
-  max-width: 90%;
-  background-color: #ffffff;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  padding: 40px;
+  margin: 60px auto;
+  max-width: 85%;
+  background: #ffffff;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
   font-family: "Arial", sans-serif;
   font-size: 18px;
+  line-height: 1.6;
   position: relative;
   box-sizing: border-box;
   text-align: left;
   display: flex;
   flex-direction: column;
-  gap: 0.75em;
+  gap: 1em;
+  overflow: visible;
 }
 
-/* ========== ICON RECHTS OBEN ========== */
 .elements-sketchpals-box::before {
   content: "";
   width: 120px;
@@ -45,86 +44,67 @@
   background-position: center;
   position: absolute;
   top: -60px;
-  right: -30px;
+  right: -45px; /* weiter rechts */
   opacity: 0.9;
   z-index: 10;
+  transform: scale(1.1);
 }
 
-/* ========== HEADINGS ========== */
-.elements-sketchpals-box h1,
-.elements-sketchpals-box h2,
-.elements-sketchpals-box h3,
-.elements-sketchpals-box h4,
-.elements-sketchpals-box h5,
-.elements-sketchpals-box h6 {
-  margin-top: 0;
-  margin-bottom: 0.5em;
-  text-align: left;
-}
 
-/* ========== ABSÄTZE ========== */
-.elements-sketchpals-box p {
-  margin: 0;
-  padding: 0;
-  font-size: 1.2rem;
-  color: #2c3e50;
-  line-height: 1.5;
-  text-align: left;
-}
 
-/* ========== &lt;br&gt; ohne Abstand ========== */
-.elements-sketchpals-box br {
-  display: block;
-  height: 0;
-  line-height: 1;
-  margin: 0;
-  padding: 0;
-}
-
-/* ========== Leere Absätze ausblenden ========== */
-.elements-sketchpals-box p:empty,
-.elements-sketchpals-box p:has(br:only-child),
-.elements-sketchpals-box p:has(span:empty) {
-  display: none;
-}
-@media screen and (max-width: 768px) {
+/* Tablet */
+@media (max-width: 1024px) {
   .elements-sketchpals-box {
-    font-size: 16px;
-    padding: 40px 14px 20px;
-    align-items: flex-start;
-    text-align: left;
+    font-size: 18px;
+    padding: 32px;
   }
 
   .elements-sketchpals-box::before {
     width: 100px;
     height: 100px;
     top: -50px;
-    left: 50%;
-    right: auto;
-    transform: translateX(-50%);
+    right: -40px; /* weiter rechts */
   }
+
+
 }
 
-@media screen and (max-width: 480px) {
+/* Handy */
+@media (max-width: 768px) {
   .elements-sketchpals-box {
-    font-size: 14px;
-    padding: 40px 12px 18px;
-    text-align: left;
-    align-items: flex-start;
+    font-size: 16px;
+    padding: 28px;
   }
 
   .elements-sketchpals-box::before {
     width: 90px;
     height: 90px;
     top: -40px;
-    left: 50%;
-    right: auto;
-    transform: translateX(-50%);
+    right: -35px; /* weiter rechts */
   }
+
+
+}
+
+/* Kleinste Screens */
+@media (max-width: 480px) {
+  .elements-sketchpals-box {
+    font-size: 14px;
+    padding: 24px;
+  }
+
+  .elements-sketchpals-box::before {
+    width: 80px;
+    height: 80px;
+    top: -35px;
+    right: -30px; /* weiter rechts */
+  }
+
+
 }
 </css>
       <timecreated>1727103659</timecreated>
-      <timemodified>1744966276</timemodified>
+      <timemodified>1745387863</timemodified>
     </row>
     <row>
       <id>3</id>
@@ -344,12 +324,13 @@
       <name>teachpals</name>
       <displayname>👩 Personen</displayname>
       <displayorder>3</displayorder>
-      <css>.elements-teachpals-box {
+      <css>/* ========== GRUNDSTIL ========== */
+.elements-teachpals-box {
   border-radius: 25px;
-  border: 2px solid #333333; 
+  border: 2px solid #333333;
   padding: 30px;
   margin: 60px auto;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12); 
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
   font-family: 'Helvetica', Arial, sans-serif;
   font-size: 18px;
   text-align: left;
@@ -361,50 +342,13 @@
   background: linear-gradient(to bottom right, var(--box-bg-light, #ffffff), var(--box-bg-dark, #f8f8f8));
   box-sizing: border-box;
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
   gap: 20px;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 40px;
+  padding-right: 10px;
 }
 
-/* 🎨 Jede Box hat ihre eigene Farbe */
-.elements-teachpals-box.tip {
-  --box-bg-light: #fff7d4;
-  --box-bg-dark: #ffeb9c;
-  border-left: 6px solid #f4c159;
-}
-.elements-teachpals-box.scenario {
-  --box-bg-light: #eaf7ff;
-  --box-bg-dark: #cdefff;
-  border-left: 6px solid #7eb9e9;
-}
-.elements-teachpals-box.dontdo {
-  --box-bg-light: #ffe6eb;
-  --box-bg-dark: #ffccd5;
-  border-left: 6px solid #c8354f;
-}
-.elements-teachpals-box.do {
-  --box-bg-light: #f1fbe0;
-  --box-bg-dark: #c6eaa0;
-  border-left: 6px solid #74b667;
-}
-.elements-teachpals-box.question {
-  --box-bg-light: #fff2e0;
-  --box-bg-dark: #ffd9b3;
-  border-left: 6px solid #ff9a5c;
-}
-.elements-teachpals-box.feedback {
-  --box-bg-light: #ecfce5;
-  --box-bg-dark: #c9f4b6;
-  border-left: 6px solid #7cc26f;
-}
-.elements-teachpals-box.task {
-  --box-bg-light: #f6ebff;
-  --box-bg-dark: #dfccff;
-  border-left: 6px solid #a480e8;
-}
-
-/* 🟡 Avatar 1 (Links) */
+/* ========== AVATAR 1 (links) ========== */
 .elements-teachpals-box::before {
   content: "";
   width: 120px;
@@ -413,152 +357,94 @@
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
-  top: -45px;
-  left: -65px;
+  top: -60px;
+  left: -45px;
   z-index: 2;
 }
 
-/* 🟡 Avatar 1 (Robi) – Weiter nach links */
-.robi-bot.elements-teachpals-box::before {
-  left: -70px;
-  top: -45px;
-  width: 120px;
-  height: 120px;
-}
-
-/* 🟡 Avatar 2 (Rechts) */
+/* ========== AVATAR 2 (rechts) ========== */
 .elements-teachpals-box.elements-avatar2-variant::before {
   left: auto;
-  right: -65px;
-  top: -45px;
-  width: 120px;
-  height: 120px;
+  right: -45px;
 }
 
-/* 🟡 Avatar 2 (Bot) – Kleiner &amp; leicht schräg */
-.elements-avatar2-variant.robi-bot.elements-teachpals-box::before {
-  right: -45px;
-  top: -40px;
+.elements-teachpals-box.elements-avatar2-variant {
+  padding-left: 10px;
+  padding-right: 40px;
+}
+
+/* ========== SPEZIALFALL: Avatar 2 Robi/Bot ========== */
+.elements-teachpals-box.elements-avatar2-variant.elements-robi-bot-flavor::before {
   width: 90px;
   height: 90px;
+  right: -45px;
   transform: rotate(20deg);
 }
 
-/* 📌 Textflow */
-.elements-teachpals-box p {
-  margin: 0;
-  flex: 1;
-  padding-left: 200px;
-  padding-right: 120px;
-  text-align: justify;
-  max-width: 85%;
-}
-
-/* 📌 Responsive Design */
-@media screen (max-width: 1024px) {
+/* ========== RESPONSIVE: TABLET ========== */
+@media screen and (max-width: 768px) {
   .elements-teachpals-box {
-    font-size: 18px;
-    padding: 25px;
-  min-width: 260px;
-    padding-left: 40px;
-    padding-right: 40px;
-max-width: 80%; 
-  }
-  .elements-teachpals-box::before {
-    width: 90px;
-    height: 90px;
-    top: -55px;
-    left: 0;
-  }
-  .elements-teachpals-box.elements-avatar2-variant::before {
-    right: 0;
-    top: -55px;
-    width: 90px;
-    height: 90px;
+    font-size: 16px;
+    padding: 30px 16px 24px 16px;
   }
 
-  /* 🔥 Robi &amp; Bot für Tablet-Ansicht */
-  .robi-bot.elements-teachpals-box::before {
-    left: 0;
-    width: 90px;
-    height: 90px;
+  .elements-teachpals-box::before {
+    width: 80px;
+    height: 80px;
+    top: -50px;
+    left: -35px;
   }
-  .elements-avatar2-variant.robi-bot.elements-teachpals-box::before {
-    right: 0;
+
+  .elements-teachpals-box.elements-avatar2-variant::before {
+    width: 80px;
+    height: 80px;
+    right: -35px;
+    left: auto;
+  }
+
+  .elements-teachpals-box.elements-avatar2-variant.elements-robi-bot-flavor::before {
     width: 65px;
     height: 65px;
+    right: -30px;
+    top: -45px;
     transform: rotate(15deg);
   }
 }
 
-/* 📌 Mobile Ansicht */
-@media screen (max-width: 768px) {
+/* ========== RESPONSIVE: HANDY ========== */
+@media screen and (max-width: 480px) {
   .elements-teachpals-box {
-    flex-direction: column;
-    text-align: left;
-    padding: 30px;
-    align-items: flex-start;
-max-width: 70%;
-  min-width: 260px;
-  }
-  .elements-teachpals-box::before {
-    width: 80px;
-    height: 80px;
-    float: none;
-    margin: 0;
-  }
-  .elements-teachpals-box p {
-    padding-left: 0;
-    padding-right: 0;
+    font-size: 14px;
+    padding: 25px 12px 18px 12px;
+    max-width: 90%;
   }
 
-  /* 🔥 Robi &amp; Bot für Mobil-Ansicht */
-  .robi-bot.elements-teachpals-box::before {
-    left: 0;
-    width: 80px;
-    height: 80px;
+  .elements-teachpals-box::before {
+    width: 60px;
+    height: 60px;
+    top: -40px;
+    left: -15px;
   }
-  .elements-avatar2-variant.robi-bot.elements-teachpals-box::before {
-    right: 0;
-    width: 65px;
-    height: 65px;
+
+  .elements-teachpals-box.elements-avatar2-variant::before {
+    width: 60px;
+    height: 60px;
+    top: -40px;
+    right: -15px;
+    left: auto;
+  }
+
+  .elements-teachpals-box.elements-avatar2-variant.elements-robi-bot-flavor::before {
+    width: 50px;
+    height: 50px;
+    right: -15px;
+    top: -35px;
     transform: rotate(10deg);
   }
 }
-
-/* 📌 Kleinste Screens */
-@media screen (max-width: 480px) {
-  .elements-teachpals-box {
-    font-size: 16px;
-    padding: 20px;
-    max-width: 75%;
-
-  }
-  .elements-teachpals-box::before {
-    width: 70px;
-    height: 70px;
-  }
-  .elements-avatar2-variant.elements-teachpals-box::before {
-    right: 0;
-    width: 70px;
-    height: 70px;
-  
-  }
-  /* 🔥 Robi &amp; Bot für sehr kleine Screens */
-  .robi-bot.elements-teachpals-box::before {
-    left: 0;
-    width: 70px;
-    height: 70px;
-  }
-  .elements-avatar2-variant.robi-bot.elements-teachpals-box::before {
-    right: 0;
-    width: 55px;
-    height: 55px;
-    transform: rotate(8deg);
-  }
-}</css>
+</css>
       <timecreated>0</timecreated>
-      <timemodified>1741205686</timemodified>
+      <timemodified>1745414837</timemodified>
     </row>
     <row>
       <id>5</id>
@@ -586,8 +472,8 @@ max-width: 70%;
 .elements-culturalpals-box::before {
   content: "";
   float: left; 
-  width: 150px; 
-  height: 150px;
+  width: 100px; 
+  height: 100px;
   margin: -50px 5px 5px -50px; 
   background-size: cover;
   background-position: center;
@@ -618,16 +504,16 @@ border: 3px solid black; /* Dünnerer Rahmen */
   }
 
   .elements-culturalpals-box::before {
-    width: 110px; 
-    height: 110px;
+    width: 80px; 
+    height: 80px;
     top: -20px; 
     left: -15px;
     margin-right: 5px; 
   }
 
   .elements-culturalpals-box.elements-avatar2-variant::before {
-    width: 110px;
-    height: 110px;
+    width: 60px;
+    height: 60px;
     top: -20px; 
     right: -15px;
     margin-left: 5px; 
@@ -650,8 +536,8 @@ border-radius: 5px;
     float: left;
     margin: 0 0 0 -2px; /* Kleinere Abstände */
     display: block;
-    width: 80px; /* Kleinere Avatare */
-    height: 80px;
+    width: 60px; /* Kleinere Avatare */
+    height: 60px;
     position: relative;
   }
 
@@ -665,16 +551,18 @@ border-radius: 5px;
   }
 }</css>
       <timecreated>1727101906</timecreated>
-      <timemodified>1741269159</timemodified>
+      <timemodified>1745239383</timemodified>
     </row>
     <row>
       <id>6</id>
       <name>skills</name>
       <displayname>🛠️ Fähigkeiten</displayname>
       <displayorder>5</displayorder>
-      <css>.elements-skills-box {
+      <css>/* ========== GRUNDSTIL: Skills-Box, angepasst an Teachpals-Verhalten ========== */
+.elements-skills-box {
   border-radius: 25px;
-  padding: 40px 30px 30px 140px; 
+  border: 2px solid #333333;
+  padding: 30px 30px 30px 40px;
   margin: 60px auto;
   font-family: 'Helvetica', Arial, sans-serif;
   font-size: 18px;
@@ -683,55 +571,63 @@ border-radius: 5px;
   position: relative;
   line-height: 1.6;
   min-width: 300px;
-  max-width: 90%;
+  max-width: 85%;
   box-sizing: border-box;
   background: #fff9d6;
-  border: 2px solid #333333;
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1), inset 0 -3px 6px rgba(255, 255, 255, 0.6);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
+/* ========== AVATAR / ICON LINKS OBEN ========== */
 .elements-skills-box::before {
   content: "";
   position: absolute;
-  left: -20px; 
-  top: -20px;
-  width: 120px; 
-  height: 120px; 
+  left: -45px;
+  top: -60px;
+  width: 120px;
+  height: 120px;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   z-index: 2;
 }
 
-
-
-@media screen (max-width: 768px) {
+/* ========== RESPONSIVE: TABLET ========== */
+@media screen and (max-width: 768px) {
   .elements-skills-box {
-    padding: 30px 20px 20px 110px; 
     font-size: 16px;
+    padding: 28px 20px 24px 30px;
+    max-width: 90%;
   }
+
   .elements-skills-box::before {
-    width: 100px; 
-    height: 100px; 
-    left: -10px; 
-    top: 5px;
+    width: 90px;
+    height: 90px;
+    top: -50px;
+    left: -35px;
   }
 }
 
-@media screen (max-width: 480px) {
+/* ========== RESPONSIVE: HANDY ========== */
+@media screen and (max-width: 480px) {
   .elements-skills-box {
-    padding: 25px 15px 15px 90px; 
     font-size: 14px;
+    padding: 24px 16px 20px 20px;
   }
+
   .elements-skills-box::before {
-    width: 80px; 
-    height: 80px; 
-    left: -5px; 
-    top: 0px;
+    width: 70px;
+    height: 70px;
+    top: -40px;
+    left: -20px;
   }
 }
+
 </css>
       <timecreated>1736523257</timecreated>
-      <timemodified>1741211478</timemodified>
+      <timemodified>1745415054</timemodified>
     </row>
     <row>
       <id>7</id>
@@ -886,89 +782,92 @@ border-radius: 5px;
       <displayorder>1</displayorder>
       <css>/* 🏆 Titel-Box – Clean, Modern &amp; Einheitlich */
 .elements-teachpals-title-box {
-  padding: 100px 50px 40px;
-  margin: 100px auto 50px;
+  padding: 80px 50px 30px; /* 👈 Mehr Platz oben */
+  margin: 100px auto 40px; /* 👈 Mehr Platz nach oben */
   max-width: 85%;
-  border-radius: 20px;
+  border-radius: 18px;
   background: linear-gradient(to bottom right, #f5f7fa, #e3eaf2);
   color: #1e293b;
   text-align: center;
-  font-family: "Inter", sans-serif;
+  font-family: "Arial", sans-serif;
   font-weight: 900;
   font-size: 46px;
-  text-transform: uppercase;
   letter-spacing: 1.5px;
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
-  border: 2px solid #333333; /* 🖤 Einheitlicher Rand */
+  border: 2px solid #333333; 
   position: relative;
   z-index: 1;
 }
 
-/* 🎨 Fester, NICHT transparenter Kreis für den Avatar */
+/* 🎨 Avatar-Kreis */
 .elements-teachpals-title-box::before {
   content: "";
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: -60px; /* 🔥 Perfekt eingebettet */
+  top: -70px; /* 👈 Etwas höher, damit er vollständig sichtbar ist */
   width: 120px;
   height: 120px;
-  background: #d1d5db; /* 💙 Solide Hintergrundfarbe */
+  background: #d1d5db;
   border-radius: 50%;
-  border: 3px solid #333333; /* 🖤 Einheitlicher Rand */
+  border: 3px solid #333333; 
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
   z-index: 10;
 }
 
-/* 🖼️ Avatar/Icon Bild (perfekt im Kreis zentriert) */
+/* 🖼️ Avatar-Bild */
 .elements-teachpals-title-box img {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: -55px; /* 🔥 Liegt sauber im Kreis */
+  top: -65px; /* 👈 Leicht angepasst, sitzt jetzt perfekt im Kreis */
   width: 110px;
   height: 110px;
   border-radius: 50%;
   object-fit: cover;
-  background: #ffffff; /* ✅ Avatar hat soliden Hintergrund */
+  background: #ffffff;
   padding: 5px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* 🌟 Dezenter Schatten für Kontrast */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   z-index: 15;
 }
 
-/* 📌 Responsive Anpassungen */
-@media screen (max-width: 768px) {
+/* 📌 Tablet */
+@media screen and (max-width: 768px) {
   .elements-teachpals-title-box {
     font-size: 38px;
-    padding: 80px 40px 30px;
-    max-width: 90%;
+    padding: 90px 40px 30px;
     margin: 90px auto 40px;
   }
+
   .elements-teachpals-title-box::before {
-    top: -50px;
+    top: -60px;
     width: 100px;
     height: 100px;
   }
+
   .elements-teachpals-title-box img {
-    top: -45px;
+    top: -55px;
     width: 90px;
     height: 90px;
   }
 }
 
-@media screen (max-width: 480px) {
+/* 📌 Handy */
+@media screen and (max-width: 480px) {
   .elements-teachpals-title-box {
     font-size: 32px;
-    padding: 70px 30px 25px;
+    padding: 85px 30px 25px;
     margin: 80px auto 35px;
   }
+
   .elements-teachpals-title-box::before {
-    top: -45px;
+    top: -55px;
     width: 90px;
     height: 90px;
   }
+
   .elements-teachpals-title-box img {
-    top: -40px;
+    top: -50px;
     width: 80px;
     height: 80px;
   }
@@ -978,7 +877,7 @@ border-radius: 5px;
       <iconurl></iconurl>
       <hideforstudents>0</hideforstudents>
       <timecreated>0</timecreated>
-      <timemodified>1741205371</timemodified>
+      <timemodified>1745225744</timemodified>
     </row>
     <row>
       <id>6</id>
@@ -2565,16 +2464,16 @@ border-radius: 5px;
   font-size: 32px;
   font-weight: 900;
   text-align: center;
-  background: #f5f5f5; 
+  background: #f5f5f5; /* Leicht dunkler als weiß für subtile Differenz */
   color: #1B263B;
-  box-shadow: none; 
+  box-shadow: none; /* Kein 3D, bleibt flach */
   position: relative;
   max-width: 95%;
   box-sizing: border-box;
   text-transform: uppercase;
   letter-spacing: 1.2px;
-  border: 3px solid #b0b0b0; 
-  border-bottom: 6px solid #666666; 
+  border: 3px solid #b0b0b0; /* Dunklere Border für mehr Kontrast */
+  border-bottom: 6px solid #666666; /* Stärkere untere Linie für mehr Gewicht */
 }
 
 /* Mobile Anpassungen */
@@ -2596,7 +2495,7 @@ border-radius: 5px;
       <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/1/Hi123.svg</iconurl>
       <hideforstudents>0</hideforstudents>
       <timecreated>1728836302</timecreated>
-      <timemodified>1744884209</timemodified>
+      <timemodified>1741211249</timemodified>
     </row>
     <row>
       <id>41</id>
@@ -2868,7 +2767,7 @@ border: 2px solid #b5b5b5;
       <code>&lt;div class="elements-skills-box elements-skills-feedback {{VARIANTS}} {{FLAVOR}}"&gt;{{PLACEHOLDER}}&lt;/div&gt;</code>
       <text>Text</text>
       <displayorder>8</displayorder>
-      <css>.elements-skills-box.elements-skills-feedback1 {
+      <css>.elements-skills-box.elements-skills-feedback {
   background-color: #E7FAC3; 
  border: 2px solid #b5b5b5;
 }</css>
@@ -2876,7 +2775,7 @@ border: 2px solid #b5b5b5;
       <iconurl></iconurl>
       <hideforstudents>1</hideforstudents>
       <timecreated>1736668836</timecreated>
-      <timemodified>1741261529</timemodified>
+      <timemodified>1745415286</timemodified>
     </row>
     <row>
       <id>51</id>
@@ -3166,7 +3065,7 @@ border: 2px solid #b5b5b5;
       <iconurl></iconurl>
       <hideforstudents>0</hideforstudents>
       <timecreated>1737351129</timecreated>
-      <timemodified>1741261469</timemodified>
+      <timemodified>1745238988</timemodified>
     </row>
     <row>
       <id>64</id>
@@ -3185,7 +3084,7 @@ border: 2px solid #b5b5b5;
       <iconurl></iconurl>
       <hideforstudents>0</hideforstudents>
       <timecreated>1737365037</timecreated>
-      <timemodified>1741334213</timemodified>
+      <timemodified>1745238993</timemodified>
     </row>
     <row>
       <id>65</id>
@@ -3204,7 +3103,7 @@ border: 2px solid #b5b5b5;
       <iconurl></iconurl>
       <hideforstudents>0</hideforstudents>
       <timecreated>1737366301</timecreated>
-      <timemodified>1741261484</timemodified>
+      <timemodified>1745238998</timemodified>
     </row>
     <row>
       <id>66</id>
@@ -3224,7 +3123,7 @@ border: 2px solid #b5b5b5;
       <iconurl></iconurl>
       <hideforstudents>0</hideforstudents>
       <timecreated>1737879495</timecreated>
-      <timemodified>1741254074</timemodified>
+      <timemodified>1745239008</timemodified>
     </row>
     <row>
       <id>67</id>
@@ -3279,7 +3178,7 @@ border: 2px solid #b5b5b5;
       <iconurl></iconurl>
       <hideforstudents>0</hideforstudents>
       <timecreated>1737879922</timecreated>
-      <timemodified>1741261455</timemodified>
+      <timemodified>1745240102</timemodified>
     </row>
     <row>
       <id>68</id>
@@ -3299,7 +3198,7 @@ border: 2px solid #b5b5b5;
       <iconurl></iconurl>
       <hideforstudents>0</hideforstudents>
       <timecreated>1737880057</timecreated>
-      <timemodified>1741254078</timemodified>
+      <timemodified>1745239002</timemodified>
     </row>
     <row>
       <id>69</id>
@@ -3318,7 +3217,7 @@ border: 2px solid #b5b5b5;
       <iconurl></iconurl>
       <hideforstudents>0</hideforstudents>
       <timecreated>1737880212</timecreated>
-      <timemodified>1741261497</timemodified>
+      <timemodified>1745239013</timemodified>
     </row>
     <row>
       <id>70</id>
@@ -3338,7 +3237,7 @@ border: 2px solid #b5b5b5;
       <iconurl></iconurl>
       <hideforstudents>0</hideforstudents>
       <timecreated>1737880303</timecreated>
-      <timemodified>1741334161</timemodified>
+      <timemodified>1745239017</timemodified>
     </row>
     <row>
       <id>71</id>
@@ -3814,6 +3713,312 @@ border: 2px solid #b5b5b5;
       <timecreated>1737215488</timecreated>
       <timemodified>1741333748</timemodified>
     </row>
+    <row>
+      <id>99</id>
+      <name>sketchpals-coffeebreak</name>
+      <displayname>☕️Kaffee Pause </displayname>
+      <categoryname>sketchpals</categoryname>
+      <code>&lt;div class="elements-sketchpals-box elements-sketchpals-coffeebreak {{VARIANTS}}"&gt;
+  &lt;p&gt;{{PLACEHOLDER}}&lt;/p&gt;
+&lt;/div&gt;</code>
+      <text>Text</text>
+      <displayorder>9</displayorder>
+      <css></css>
+      <js></js>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/2/Kaffeepause.svg</iconurl>
+      <hideforstudents>0</hideforstudents>
+      <timecreated>1728719519</timecreated>
+      <timemodified>1745315918</timemodified>
+    </row>
+    <row>
+      <id>100</id>
+      <name>sketchpals-hummingbird</name>
+      <displayname>🕊️ Achtsamer Moment </displayname>
+      <categoryname>sketchpals</categoryname>
+      <code>&lt;div class="elements-sketchpals-box elements-sketchpals-hummingbird {{VARIANTS}}"&gt;
+  &lt;p&gt;{{PLACEHOLDER}}&lt;/p&gt;
+&lt;/div&gt;</code>
+      <text>Text</text>
+      <displayorder>9</displayorder>
+      <css></css>
+      <js></js>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/2/Kolibri.svg</iconurl>
+      <hideforstudents>0</hideforstudents>
+      <timecreated>1728719519</timecreated>
+      <timemodified>1745314738</timemodified>
+    </row>
+    <row>
+      <id>101</id>
+      <name>sketchpals-cat</name>
+      <displayname>🐾Kuschel Zeit</displayname>
+      <categoryname>sketchpals</categoryname>
+      <code>&lt;div class="elements-sketchpals-box elements-sketchpals-cat {{VARIANTS}}"&gt;
+  &lt;p&gt;{{PLACEHOLDER}}&lt;/p&gt;
+&lt;/div&gt;</code>
+      <text>Text</text>
+      <displayorder>9</displayorder>
+      <css></css>
+      <js></js>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/2/Katze.svg</iconurl>
+      <hideforstudents>0</hideforstudents>
+      <timecreated>1728719519</timecreated>
+      <timemodified>1745315928</timemodified>
+    </row>
+    <row>
+      <id>102</id>
+      <name>sketchpals-wolken</name>
+      <displayname>☁️Wolken Träume</displayname>
+      <categoryname>sketchpals</categoryname>
+      <code>&lt;div class="elements-sketchpals-box elements-sketchpals-wolken {{VARIANTS}}"&gt;
+  &lt;p&gt;{{PLACEHOLDER}}&lt;/p&gt;
+&lt;/div&gt;</code>
+      <text>Text</text>
+      <displayorder>9</displayorder>
+      <css></css>
+      <js></js>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/2/Kolibri.svg</iconurl>
+      <hideforstudents>0</hideforstudents>
+      <timecreated>1728719519</timecreated>
+      <timemodified>1745315986</timemodified>
+    </row>
+    <row>
+      <id>103</id>
+      <name>sketchpals-hangematte</name>
+      <displayname>😌Häng dich rein</displayname>
+      <categoryname>sketchpals</categoryname>
+      <code>&lt;div class="elements-sketchpals-box elements-sketchpals-hangematte {{VARIANTS}}"&gt;
+  &lt;p&gt;{{PLACEHOLDER}}&lt;/p&gt;
+&lt;/div&gt;</code>
+      <text>Text</text>
+      <displayorder>9</displayorder>
+      <css></css>
+      <js></js>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/2/Katze.svg</iconurl>
+      <hideforstudents>0</hideforstudents>
+      <timecreated>1728719519</timecreated>
+      <timemodified>1745316023</timemodified>
+    </row>
+    <row>
+      <id>104</id>
+      <name>sketchpals-lesepause</name>
+      <displayname>📚Lese Pause</displayname>
+      <categoryname>sketchpals</categoryname>
+      <code>&lt;div class="elements-sketchpals-box elements-sketchpals-lesepause {{VARIANTS}}"&gt;
+  &lt;p&gt;{{PLACEHOLDER}}&lt;/p&gt;
+&lt;/div&gt;</code>
+      <text>Text</text>
+      <displayorder>9</displayorder>
+      <css></css>
+      <js></js>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/2/Kolibri.svg</iconurl>
+      <hideforstudents>0</hideforstudents>
+      <timecreated>1728719519</timecreated>
+      <timemodified>1745316044</timemodified>
+    </row>
+    <row>
+      <id>105</id>
+      <name>sketchpals-raus</name>
+      <displayname>🌳Kurz mal raus</displayname>
+      <categoryname>sketchpals</categoryname>
+      <code>&lt;div class="elements-sketchpals-box elements-sketchpals-raus {{VARIANTS}}"&gt;
+  &lt;p&gt;{{PLACEHOLDER}}&lt;/p&gt;
+&lt;/div&gt;</code>
+      <text>Text</text>
+      <displayorder>9</displayorder>
+      <css></css>
+      <js></js>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/2/Kolibri.svg</iconurl>
+      <hideforstudents>0</hideforstudents>
+      <timecreated>1728719519</timecreated>
+      <timemodified>1745316059</timemodified>
+    </row>
+    <row>
+      <id>106</id>
+      <name>sketchpals-blume</name>
+      <displayname>🌼Blumen Pause</displayname>
+      <categoryname>sketchpals</categoryname>
+      <code>&lt;div class="elements-sketchpals-box elements-sketchpals-blume {{VARIANTS}}"&gt;
+  &lt;p&gt;{{PLACEHOLDER}}&lt;/p&gt;
+&lt;/div&gt;</code>
+      <text>Text</text>
+      <displayorder>9</displayorder>
+      <css></css>
+      <js></js>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/2/Kolibri.svg</iconurl>
+      <hideforstudents>0</hideforstudents>
+      <timecreated>1728719519</timecreated>
+      <timemodified>1745318009</timemodified>
+    </row>
+    <row>
+      <id>107</id>
+      <name>sketchpals-planstarten</name>
+      <displayname>✅Plan starten</displayname>
+      <categoryname>sketchpals</categoryname>
+      <code>&lt;div class="elements-sketchpals-box elements-sketchpals-planstarten {{VARIANTS}}"&gt;
+  &lt;p&gt;{{PLACEHOLDER}}&lt;/p&gt;
+&lt;/div&gt;</code>
+      <text>Text</text>
+      <displayorder>1</displayorder>
+      <css></css>
+      <js></js>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/2/Checkliste.svg</iconurl>
+      <hideforstudents>0</hideforstudents>
+      <timecreated>1728719519</timecreated>
+      <timemodified>1745353197</timemodified>
+    </row>
+    <row>
+      <id>108</id>
+      <name>sketchpals-ideensammeln</name>
+      <displayname>💡 Ideen sammeln</displayname>
+      <categoryname>sketchpals</categoryname>
+      <code>&lt;div class="elements-sketchpals-box elements-sketchpals-planit {{VARIANTS}}"&gt;
+  &lt;p&gt;{{PLACEHOLDER}}&lt;/p&gt;
+&lt;/div&gt;</code>
+      <text>Text</text>
+      <displayorder>3</displayorder>
+      <css></css>
+      <js></js>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/2/Planen%20Mindmap.svg</iconurl>
+      <hideforstudents>0</hideforstudents>
+      <timecreated>1728719519</timecreated>
+      <timemodified>1745352819</timemodified>
+    </row>
+    <row>
+      <id>109</id>
+      <name>sketchpals-rollen</name>
+      <displayname>⚙️Rollen verteilen</displayname>
+      <categoryname>sketchpals</categoryname>
+      <code>&lt;div class="elements-sketchpals-box elements-sketchpals-rollen {{VARIANTS}}"&gt;
+  &lt;p&gt;{{PLACEHOLDER}}&lt;/p&gt;
+&lt;/div&gt;</code>
+      <text>Text</text>
+      <displayorder>4</displayorder>
+      <css></css>
+      <js></js>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/2/Rolle%20kla%CC%88ren.svg</iconurl>
+      <hideforstudents>0</hideforstudents>
+      <timecreated>1728719519</timecreated>
+      <timemodified>1745352805</timemodified>
+    </row>
+    <row>
+      <id>110</id>
+      <name>sketchpals-flow</name>
+      <displayname>🧠☕️ im Flow</displayname>
+      <categoryname>sketchpals</categoryname>
+      <code>&lt;div class="elements-sketchpals-box elements-sketchpals-flow {{VARIANTS}}"&gt;
+  &lt;p&gt;{{PLACEHOLDER}}&lt;/p&gt;
+&lt;/div&gt;</code>
+      <text>Text</text>
+      <displayorder>5</displayorder>
+      <css></css>
+      <js></js>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/2/Im%20flow.svg</iconurl>
+      <hideforstudents>0</hideforstudents>
+      <timecreated>1728719519</timecreated>
+      <timemodified>1745352795</timemodified>
+    </row>
+    <row>
+      <id>111</id>
+      <name>sketchpals-probleme</name>
+      <displayname>🚧Probleme</displayname>
+      <categoryname>sketchpals</categoryname>
+      <code>&lt;div class="elements-sketchpals-box elements-sketchpals-probleme {{VARIANTS}}"&gt;
+  &lt;p&gt;{{PLACEHOLDER}}&lt;/p&gt;
+&lt;/div&gt;</code>
+      <text>Text</text>
+      <displayorder>7</displayorder>
+      <css></css>
+      <js></js>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/2/Problem.svg</iconurl>
+      <hideforstudents>0</hideforstudents>
+      <timecreated>1728719519</timecreated>
+      <timemodified>1745352741</timemodified>
+    </row>
+    <row>
+      <id>112</id>
+      <name>sketchpals-boardoeffnen</name>
+      <displayname>🗂Kanban öffnen</displayname>
+      <categoryname>sketchpals</categoryname>
+      <code>&lt;div class="elements-sketchpals-box elements-sketchpals-boardoeffnen {{VARIANTS}}"&gt;
+  &lt;p&gt;{{PLACEHOLDER}}&lt;/p&gt;
+&lt;/div&gt;</code>
+      <text>Text</text>
+      <displayorder>2</displayorder>
+      <css></css>
+      <js></js>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/2/Kanban.svg</iconurl>
+      <hideforstudents>0</hideforstudents>
+      <timecreated>1728719519</timecreated>
+      <timemodified>1745353205</timemodified>
+    </row>
+    <row>
+      <id>113</id>
+      <name>sketchpals-rueckblick</name>
+      <displayname>Rückblick</displayname>
+      <categoryname>sketchpals</categoryname>
+      <code>&lt;div class="elements-sketchpals-box elements-sketchpals-rueckblick {{VARIANTS}}"&gt;
+  &lt;p&gt;{{PLACEHOLDER}}&lt;/p&gt;
+&lt;/div&gt;</code>
+      <text>Text</text>
+      <displayorder>9</displayorder>
+      <css></css>
+      <js></js>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/2/Rueckblick.svg</iconurl>
+      <hideforstudents>0</hideforstudents>
+      <timecreated>1728719519</timecreated>
+      <timemodified>1745352723</timemodified>
+    </row>
+    <row>
+      <id>114</id>
+      <name>sketchpals-reflexion</name>
+      <displayname>Reflexion</displayname>
+      <categoryname>sketchpals</categoryname>
+      <code>&lt;div class="elements-sketchpals-box elements-sketchpals-reflexion {{VARIANTS}}"&gt;
+  &lt;p&gt;{{PLACEHOLDER}}&lt;/p&gt;
+&lt;/div&gt;</code>
+      <text>Text</text>
+      <displayorder>10</displayorder>
+      <css></css>
+      <js></js>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/2/Reflexion.svg</iconurl>
+      <hideforstudents>0</hideforstudents>
+      <timecreated>1728719519</timecreated>
+      <timemodified>1745352704</timemodified>
+    </row>
+    <row>
+      <id>115</id>
+      <name>sketchpals-fortschritt</name>
+      <displayname>💪Fortschritt</displayname>
+      <categoryname>sketchpals</categoryname>
+      <code>&lt;div class="elements-sketchpals-box elements-sketchpals-probleme {{VARIANTS}}"&gt;
+  &lt;p&gt;{{PLACEHOLDER}}&lt;/p&gt;
+&lt;/div&gt;</code>
+      <text>Text</text>
+      <displayorder>6</displayorder>
+      <css></css>
+      <js></js>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/2/Doing.svg</iconurl>
+      <hideforstudents>0</hideforstudents>
+      <timecreated>1728719519</timecreated>
+      <timemodified>1745353170</timemodified>
+    </row>
+    <row>
+      <id>119</id>
+      <name>sketchpals-team</name>
+      <displayname>Team Power</displayname>
+      <categoryname>sketchpals</categoryname>
+      <code>&lt;div class="elements-sketchpals-box elements-sketchpals-reflexion {{VARIANTS}}"&gt;
+  &lt;p&gt;{{PLACEHOLDER}}&lt;/p&gt;
+&lt;/div&gt;</code>
+      <text>Text</text>
+      <displayorder>8</displayorder>
+      <css></css>
+      <js></js>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/2/Teamwork.svg</iconurl>
+      <hideforstudents>0</hideforstudents>
+      <timecreated>1728719519</timecreated>
+      <timemodified>1745352715</timemodified>
+    </row>
   </tiny_elements_component>
   <tiny_elements_comp_flavor>
     <row>
@@ -4009,204 +4214,6 @@ border: 2px solid #b5b5b5;
       <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/2/1%20pro%20contra%20fact%20opinion.svg</iconurl>
     </row>
     <row>
-      <id>33</id>
-      <componentname>teachpals-tip-solo</componentname>
-      <flavorname>boy</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Ge.svg</iconurl>
-    </row>
-    <row>
-      <id>34</id>
-      <componentname>teachpals-tip-solo</componentname>
-      <flavorname>bikesafety</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Af.svg</iconurl>
-    </row>
-    <row>
-      <id>35</id>
-      <componentname>teachpals-tip-solo</componentname>
-      <flavorname>read</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/44g.svg</iconurl>
-    </row>
-    <row>
-      <id>36</id>
-      <componentname>teachpals-tip-solo</componentname>
-      <flavorname>listen</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/55d.svg</iconurl>
-    </row>
-    <row>
-      <id>37</id>
-      <componentname>teachpals-tip-solo</componentname>
-      <flavorname>girl</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/6b.svg</iconurl>
-    </row>
-    <row>
-      <id>38</id>
-      <componentname>teachpals-tip</componentname>
-      <flavorname>horst-cloud</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Horsti-tip%20.svg</iconurl>
-    </row>
-    <row>
-      <id>39</id>
-      <componentname>teachpals-tip</componentname>
-      <flavorname>robi-bot</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Robi-tip.svg</iconurl>
-    </row>
-    <row>
-      <id>40</id>
-      <componentname>teachpals-tip</componentname>
-      <flavorname>gert-gisela</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Bavaria-tip.svg</iconurl>
-    </row>
-    <row>
-      <id>41</id>
-      <componentname>teachpals-tip</componentname>
-      <flavorname>marie-claude</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Marie-tip.svg</iconurl>
-    </row>
-    <row>
-      <id>42</id>
-      <componentname>teachpals-tip</componentname>
-      <flavorname>maggie-john</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Maggie-tip.svg</iconurl>
-    </row>
-    <row>
-      <id>43</id>
-      <componentname>teachpals-tip</componentname>
-      <flavorname>isabel-alejandro</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Spain-tip.svg</iconurl>
-    </row>
-    <row>
-      <id>44</id>
-      <componentname>teachpals-scenario-solo</componentname>
-      <flavorname>boy</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Gb.svg</iconurl>
-    </row>
-    <row>
-      <id>45</id>
-      <componentname>teachpals-scenario-solo</componentname>
-      <flavorname>bikesafety</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Ab.svg</iconurl>
-    </row>
-    <row>
-      <id>46</id>
-      <componentname>teachpals-scenario-solo</componentname>
-      <flavorname>read</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/44b.svg</iconurl>
-    </row>
-    <row>
-      <id>47</id>
-      <componentname>teachpals-scenario-solo</componentname>
-      <flavorname>listen</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/55c.svg</iconurl>
-    </row>
-    <row>
-      <id>48</id>
-      <componentname>teachpals-scenario-solo</componentname>
-      <flavorname>girl</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/6z.svg</iconurl>
-    </row>
-    <row>
-      <id>49</id>
-      <componentname>teachpals-scenario</componentname>
-      <flavorname>horst-cloud</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Horsti-szenario.svg</iconurl>
-    </row>
-    <row>
-      <id>50</id>
-      <componentname>teachpals-scenario</componentname>
-      <flavorname>robi-bot</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Robi-szenario.svg</iconurl>
-    </row>
-    <row>
-      <id>51</id>
-      <componentname>teachpals-scenario</componentname>
-      <flavorname>gert-gisela</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Bavaria-szenario.svg</iconurl>
-    </row>
-    <row>
-      <id>52</id>
-      <componentname>teachpals-scenario</componentname>
-      <flavorname>marie-claude</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Marie-szenario.svg</iconurl>
-    </row>
-    <row>
-      <id>53</id>
-      <componentname>teachpals-scenario</componentname>
-      <flavorname>maggie-john</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Maggie-szenario.svg</iconurl>
-    </row>
-    <row>
-      <id>54</id>
-      <componentname>teachpals-scenario</componentname>
-      <flavorname>isabel-alejandro</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Spain-szenario.svg</iconurl>
-    </row>
-    <row>
-      <id>55</id>
-      <componentname>teachpals-problem-solo</componentname>
-      <flavorname>boy</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Gg.svg</iconurl>
-    </row>
-    <row>
-      <id>56</id>
-      <componentname>teachpals-problem-solo</componentname>
-      <flavorname>bikesafety</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Ae.svg</iconurl>
-    </row>
-    <row>
-      <id>57</id>
-      <componentname>teachpals-problem-solo</componentname>
-      <flavorname>read</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/44f.svg</iconurl>
-    </row>
-    <row>
-      <id>58</id>
-      <componentname>teachpals-problem-solo</componentname>
-      <flavorname>listen</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/55e.svg</iconurl>
-    </row>
-    <row>
-      <id>59</id>
-      <componentname>teachpals-problem-solo</componentname>
-      <flavorname>girl</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/6g.svg</iconurl>
-    </row>
-    <row>
-      <id>60</id>
-      <componentname>teachpals-problem</componentname>
-      <flavorname>horst-cloud</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Horsti-frage%20.svg</iconurl>
-    </row>
-    <row>
-      <id>61</id>
-      <componentname>teachpals-problem</componentname>
-      <flavorname>robi-bot</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Robi-question.svg</iconurl>
-    </row>
-    <row>
-      <id>62</id>
-      <componentname>teachpals-problem</componentname>
-      <flavorname>gert-gisela</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Bavaria-problem.svg</iconurl>
-    </row>
-    <row>
-      <id>63</id>
-      <componentname>teachpals-problem</componentname>
-      <flavorname>marie-claude</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Marie-problem.svg</iconurl>
-    </row>
-    <row>
-      <id>64</id>
-      <componentname>teachpals-problem</componentname>
-      <flavorname>maggie-john</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Maggie-problem.svg</iconurl>
-    </row>
-    <row>
-      <id>65</id>
-      <componentname>teachpals-problem</componentname>
-      <flavorname>isabel-alejandro</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Spain-frage.svg</iconurl>
-    </row>
-    <row>
       <id>66</id>
       <componentname>attention</componentname>
       <flavorname>procedural</flavorname>
@@ -4273,42 +4280,6 @@ border: 2px solid #b5b5b5;
       <iconurl></iconurl>
     </row>
     <row>
-      <id>77</id>
-      <componentname>teachpals-tip</componentname>
-      <flavorname>teacherpair1</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/W-tip.svg</iconurl>
-    </row>
-    <row>
-      <id>78</id>
-      <componentname>teachpals-tip</componentname>
-      <flavorname>teacherpair2</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/M-tip.svg</iconurl>
-    </row>
-    <row>
-      <id>79</id>
-      <componentname>teachpals-scenario</componentname>
-      <flavorname>teacherpair1</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/W-szenario.svg</iconurl>
-    </row>
-    <row>
-      <id>80</id>
-      <componentname>teachpals-scenario</componentname>
-      <flavorname>teacherpair2</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/M-szenario.svg</iconurl>
-    </row>
-    <row>
-      <id>81</id>
-      <componentname>teachpals-problem</componentname>
-      <flavorname>teacherpair1</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/W-problem.svg</iconurl>
-    </row>
-    <row>
-      <id>82</id>
-      <componentname>teachpals-problem</componentname>
-      <flavorname>teacherpair2</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/M-frage.svg</iconurl>
-    </row>
-    <row>
       <id>83</id>
       <componentname>expectedfeedback</componentname>
       <flavorname>evaluative</flavorname>
@@ -4339,84 +4310,6 @@ border: 2px solid #b5b5b5;
       <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/3/c4l_learningoutcomes_icon.svg</iconurl>
     </row>
     <row>
-      <id>88</id>
-      <componentname>teachpals-title</componentname>
-      <flavorname>horst-cloud</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Horsti-titel%20.svg</iconurl>
-    </row>
-    <row>
-      <id>89</id>
-      <componentname>teachpals-title</componentname>
-      <flavorname>robi-bot</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Robi-titel.svg</iconurl>
-    </row>
-    <row>
-      <id>90</id>
-      <componentname>teachpals-title</componentname>
-      <flavorname>read</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/44a.svg</iconurl>
-    </row>
-    <row>
-      <id>91</id>
-      <componentname>teachpals-title</componentname>
-      <flavorname>boy</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Ga.svg</iconurl>
-    </row>
-    <row>
-      <id>92</id>
-      <componentname>teachpals-title</componentname>
-      <flavorname>listen</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/55a1.svg</iconurl>
-    </row>
-    <row>
-      <id>93</id>
-      <componentname>teachpals-title</componentname>
-      <flavorname>girl</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/6a.svg</iconurl>
-    </row>
-    <row>
-      <id>94</id>
-      <componentname>teachpals-title</componentname>
-      <flavorname>bikesafety</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Aa.svg</iconurl>
-    </row>
-    <row>
-      <id>95</id>
-      <componentname>teachpals-title</componentname>
-      <flavorname>teacherpair1</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/W-titel.svg</iconurl>
-    </row>
-    <row>
-      <id>96</id>
-      <componentname>teachpals-title</componentname>
-      <flavorname>teacherpair2</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/M-titel.svg</iconurl>
-    </row>
-    <row>
-      <id>97</id>
-      <componentname>teachpals-title</componentname>
-      <flavorname>gert-gisela</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Bavaria-titel.svg</iconurl>
-    </row>
-    <row>
-      <id>98</id>
-      <componentname>teachpals-title</componentname>
-      <flavorname>marie-claude</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Marie-titel.svg</iconurl>
-    </row>
-    <row>
-      <id>99</id>
-      <componentname>teachpals-title</componentname>
-      <flavorname>maggie-john</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Maggie-titel.svg</iconurl>
-    </row>
-    <row>
-      <id>100</id>
-      <componentname>teachpals-title</componentname>
-      <flavorname>isabel-alejandro</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Titel.svg</iconurl>
-    </row>
-    <row>
       <id>102</id>
       <componentname>sketchpals-feedback</componentname>
       <flavorname>feedback-questions</flavorname>
@@ -4445,180 +4338,6 @@ border: 2px solid #b5b5b5;
       <componentname>sketchpals-title</componentname>
       <flavorname>feedback-questions</flavorname>
       <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/2/Hi123.svg</iconurl>
-    </row>
-    <row>
-      <id>107</id>
-      <componentname>teachpals-dontdo</componentname>
-      <flavorname>horst-cloud</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Horsti-dontdo%20.svg</iconurl>
-    </row>
-    <row>
-      <id>108</id>
-      <componentname>teachpals-dontdo</componentname>
-      <flavorname>robi-bot</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Robi-dontdo.svg</iconurl>
-    </row>
-    <row>
-      <id>109</id>
-      <componentname>teachpals-dontdo</componentname>
-      <flavorname>teacherpair1</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/W-dontdo.svg</iconurl>
-    </row>
-    <row>
-      <id>110</id>
-      <componentname>teachpals-dontdo</componentname>
-      <flavorname>teacherpair2</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/M-dontdo.svg</iconurl>
-    </row>
-    <row>
-      <id>111</id>
-      <componentname>teachpals-dontdo</componentname>
-      <flavorname>gert-gisela</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Bavaria-dontdo.svg</iconurl>
-    </row>
-    <row>
-      <id>112</id>
-      <componentname>teachpals-dontdo</componentname>
-      <flavorname>marie-claude</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Marie-dontdo.svg</iconurl>
-    </row>
-    <row>
-      <id>113</id>
-      <componentname>teachpals-dontdo</componentname>
-      <flavorname>maggie-john</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Maggie-dontdo.svg</iconurl>
-    </row>
-    <row>
-      <id>114</id>
-      <componentname>teachpals-dontdo</componentname>
-      <flavorname>isabel-alejandro</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Spain-dontdo.svg</iconurl>
-    </row>
-    <row>
-      <id>115</id>
-      <componentname>teachpals-dontdo-solo</componentname>
-      <flavorname>read</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/44h.svg</iconurl>
-    </row>
-    <row>
-      <id>116</id>
-      <componentname>teachpals-dontdo-solo</componentname>
-      <flavorname>boy</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Gh.svg</iconurl>
-    </row>
-    <row>
-      <id>117</id>
-      <componentname>teachpals-dontdo-solo</componentname>
-      <flavorname>listen</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/55g.svg</iconurl>
-    </row>
-    <row>
-      <id>118</id>
-      <componentname>teachpals-dontdo-solo</componentname>
-      <flavorname>girl</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/6h.svg</iconurl>
-    </row>
-    <row>
-      <id>119</id>
-      <componentname>teachpals-dontdo-solo</componentname>
-      <flavorname>bikesafety</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Ah.svg</iconurl>
-    </row>
-    <row>
-      <id>120</id>
-      <componentname>teachpals-do</componentname>
-      <flavorname>horst-cloud</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Horsti-do.svg</iconurl>
-    </row>
-    <row>
-      <id>121</id>
-      <componentname>teachpals-do</componentname>
-      <flavorname>robi-bot</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Robi-do.svg</iconurl>
-    </row>
-    <row>
-      <id>122</id>
-      <componentname>teachpals-do</componentname>
-      <flavorname>teacherpair1</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/W-do.svg</iconurl>
-    </row>
-    <row>
-      <id>123</id>
-      <componentname>teachpals-do</componentname>
-      <flavorname>teacherpair2</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/M-do.svg</iconurl>
-    </row>
-    <row>
-      <id>124</id>
-      <componentname>teachpals-do</componentname>
-      <flavorname>gert-gisela</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Bavaria-do.svg</iconurl>
-    </row>
-    <row>
-      <id>125</id>
-      <componentname>teachpals-do</componentname>
-      <flavorname>marie-claude</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Marie-do.svg</iconurl>
-    </row>
-    <row>
-      <id>126</id>
-      <componentname>teachpals-do</componentname>
-      <flavorname>maggie-john</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Maggie-do.svg</iconurl>
-    </row>
-    <row>
-      <id>127</id>
-      <componentname>teachpals-do</componentname>
-      <flavorname>isabel-alejandro</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Spain-do.svg</iconurl>
-    </row>
-    <row>
-      <id>128</id>
-      <componentname>culturalpals-dontdo</componentname>
-      <flavorname>bavaria</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Df.svg</iconurl>
-    </row>
-    <row>
-      <id>129</id>
-      <componentname>culturalpals-dontdo</componentname>
-      <flavorname>germany</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Cf.svg</iconurl>
-    </row>
-    <row>
-      <id>130</id>
-      <componentname>culturalpals-dontdo</componentname>
-      <flavorname>europe</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Ed.svg</iconurl>
-    </row>
-    <row>
-      <id>131</id>
-      <componentname>culturalpals-dontdo</componentname>
-      <flavorname>community</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Fe.svg</iconurl>
-    </row>
-    <row>
-      <id>132</id>
-      <componentname>culturalpals-do</componentname>
-      <flavorname>bavaria</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/De.svg</iconurl>
-    </row>
-    <row>
-      <id>133</id>
-      <componentname>culturalpals-do</componentname>
-      <flavorname>germany</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Ce.svg</iconurl>
-    </row>
-    <row>
-      <id>134</id>
-      <componentname>culturalpals-do</componentname>
-      <flavorname>europe</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Ef.svg</iconurl>
-    </row>
-    <row>
-      <id>135</id>
-      <componentname>culturalpals-do</componentname>
-      <flavorname>community</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Fd.svg</iconurl>
     </row>
     <row>
       <id>136</id>
@@ -4741,102 +4460,6 @@ border: 2px solid #b5b5b5;
       <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/7/2cc.svg</iconurl>
     </row>
     <row>
-      <id>156</id>
-      <componentname>culturalpals-title</componentname>
-      <flavorname>bavaria</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Da.svg</iconurl>
-    </row>
-    <row>
-      <id>157</id>
-      <componentname>culturalpals-title</componentname>
-      <flavorname>germany</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Ca.svg</iconurl>
-    </row>
-    <row>
-      <id>158</id>
-      <componentname>culturalpals-title</componentname>
-      <flavorname>europe</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Ea.svg</iconurl>
-    </row>
-    <row>
-      <id>159</id>
-      <componentname>culturalpals-title</componentname>
-      <flavorname>community</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/F1.svg</iconurl>
-    </row>
-    <row>
-      <id>160</id>
-      <componentname>culturalpals-tip</componentname>
-      <flavorname>bavaria</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Dd.svg</iconurl>
-    </row>
-    <row>
-      <id>161</id>
-      <componentname>culturalpals-tip</componentname>
-      <flavorname>germany</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Ch.svg</iconurl>
-    </row>
-    <row>
-      <id>162</id>
-      <componentname>culturalpals-tip</componentname>
-      <flavorname>europe</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Eh.svg</iconurl>
-    </row>
-    <row>
-      <id>163</id>
-      <componentname>culturalpals-tip</componentname>
-      <flavorname>community</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Fh.svg</iconurl>
-    </row>
-    <row>
-      <id>164</id>
-      <componentname>culturalpals-problem</componentname>
-      <flavorname>bavaria</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Dg.svg</iconurl>
-    </row>
-    <row>
-      <id>165</id>
-      <componentname>culturalpals-problem</componentname>
-      <flavorname>germany</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Cg.svg</iconurl>
-    </row>
-    <row>
-      <id>166</id>
-      <componentname>culturalpals-problem</componentname>
-      <flavorname>europe</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Eg.svg</iconurl>
-    </row>
-    <row>
-      <id>167</id>
-      <componentname>culturalpals-problem</componentname>
-      <flavorname>community</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Ff.svg</iconurl>
-    </row>
-    <row>
-      <id>168</id>
-      <componentname>culturalpals-feedback1</componentname>
-      <flavorname>bavaria</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Dc.svg</iconurl>
-    </row>
-    <row>
-      <id>169</id>
-      <componentname>culturalpals-feedback1</componentname>
-      <flavorname>germany</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Cc.svg</iconurl>
-    </row>
-    <row>
-      <id>170</id>
-      <componentname>culturalpals-feedback1</componentname>
-      <flavorname>europe</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Ec.svg</iconurl>
-    </row>
-    <row>
-      <id>171</id>
-      <componentname>culturalpals-feedback1</componentname>
-      <flavorname>community</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Fc.svg</iconurl>
-    </row>
-    <row>
       <id>172</id>
       <componentname>skills-title</componentname>
       <flavorname>miscellaneous</flavorname>
@@ -4877,48 +4500,6 @@ border: 2px solid #b5b5b5;
       <componentname>skills-title</componentname>
       <flavorname>electricity</flavorname>
       <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/6/5aa.svg</iconurl>
-    </row>
-    <row>
-      <id>179</id>
-      <componentname>skills-feedback</componentname>
-      <flavorname>miscellaneous</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/6/4gg.svg</iconurl>
-    </row>
-    <row>
-      <id>180</id>
-      <componentname>skills-feedback</componentname>
-      <flavorname>spell</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/6/33c.svg</iconurl>
-    </row>
-    <row>
-      <id>181</id>
-      <componentname>skills-feedback</componentname>
-      <flavorname>write</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/6/22c.svg</iconurl>
-    </row>
-    <row>
-      <id>182</id>
-      <componentname>skills-feedback</componentname>
-      <flavorname>eye</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/6/6hh.svg</iconurl>
-    </row>
-    <row>
-      <id>183</id>
-      <componentname>skills-feedback</componentname>
-      <flavorname>media</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/6/1aa.svg</iconurl>
-    </row>
-    <row>
-      <id>184</id>
-      <componentname>skills-feedback</componentname>
-      <flavorname>linguistics</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/6/11.svg</iconurl>
-    </row>
-    <row>
-      <id>185</id>
-      <componentname>skills-feedback</componentname>
-      <flavorname>electricity</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/6/5ff.svg</iconurl>
     </row>
     <row>
       <id>186</id>
@@ -5197,162 +4778,6 @@ border: 2px solid #b5b5b5;
       <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/7/2hh.svg</iconurl>
     </row>
     <row>
-      <id>232</id>
-      <componentname>teachpals-feedback</componentname>
-      <flavorname>horst-cloud</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Horsti-like.svg</iconurl>
-    </row>
-    <row>
-      <id>233</id>
-      <componentname>teachpals-feedback</componentname>
-      <flavorname>robi-bot</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Robi-like.svg</iconurl>
-    </row>
-    <row>
-      <id>234</id>
-      <componentname>teachpals-feedback</componentname>
-      <flavorname>teacherpair1</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/W1-feedback.svg</iconurl>
-    </row>
-    <row>
-      <id>235</id>
-      <componentname>teachpals-feedback</componentname>
-      <flavorname>teacherpair2</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/M-feedback.svg</iconurl>
-    </row>
-    <row>
-      <id>236</id>
-      <componentname>teachpals-feedback</componentname>
-      <flavorname>gert-gisela</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Bavaria-feedback.svg</iconurl>
-    </row>
-    <row>
-      <id>237</id>
-      <componentname>teachpals-feedback</componentname>
-      <flavorname>marie-claude</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Marie-feedback.svg</iconurl>
-    </row>
-    <row>
-      <id>238</id>
-      <componentname>teachpals-feedback</componentname>
-      <flavorname>maggie-john</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Maggie-feedback.svg</iconurl>
-    </row>
-    <row>
-      <id>239</id>
-      <componentname>teachpals-feedback</componentname>
-      <flavorname>isabel-alejandro</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Spain-feedback.svg</iconurl>
-    </row>
-    <row>
-      <id>240</id>
-      <componentname>teachpals-feedback1-solo</componentname>
-      <flavorname>read</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/44c.svg</iconurl>
-    </row>
-    <row>
-      <id>241</id>
-      <componentname>teachpals-feedback1-solo</componentname>
-      <flavorname>boy</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Gf.svg</iconurl>
-    </row>
-    <row>
-      <id>242</id>
-      <componentname>teachpals-feedback1-solo</componentname>
-      <flavorname>listen</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/55h.svg</iconurl>
-    </row>
-    <row>
-      <id>243</id>
-      <componentname>teachpals-feedback1-solo</componentname>
-      <flavorname>girl</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/6e.svg</iconurl>
-    </row>
-    <row>
-      <id>244</id>
-      <componentname>teachpals-feedback1-solo</componentname>
-      <flavorname>bikesafety</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Ac.svg</iconurl>
-    </row>
-    <row>
-      <id>245</id>
-      <componentname>teachpals-task</componentname>
-      <flavorname>horst-cloud</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Horsti-task.svg</iconurl>
-    </row>
-    <row>
-      <id>246</id>
-      <componentname>teachpals-task</componentname>
-      <flavorname>robi-bot</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Robi-task.svg</iconurl>
-    </row>
-    <row>
-      <id>247</id>
-      <componentname>teachpals-task</componentname>
-      <flavorname>teacherpair1</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/W-task.svg</iconurl>
-    </row>
-    <row>
-      <id>248</id>
-      <componentname>teachpals-task</componentname>
-      <flavorname>teacherpair2</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/M-task.svg</iconurl>
-    </row>
-    <row>
-      <id>249</id>
-      <componentname>teachpals-task</componentname>
-      <flavorname>gert-gisela</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Bavaria-task.svg</iconurl>
-    </row>
-    <row>
-      <id>250</id>
-      <componentname>teachpals-task</componentname>
-      <flavorname>marie-claude</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Marie-task.svg</iconurl>
-    </row>
-    <row>
-      <id>251</id>
-      <componentname>teachpals-task</componentname>
-      <flavorname>maggie-john</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Maggie-task.svg</iconurl>
-    </row>
-    <row>
-      <id>252</id>
-      <componentname>teachpals-task</componentname>
-      <flavorname>isabel-alejandro</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Spain-task.svg</iconurl>
-    </row>
-    <row>
-      <id>253</id>
-      <componentname>teachpals-task-solo</componentname>
-      <flavorname>read</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/44d.svg</iconurl>
-    </row>
-    <row>
-      <id>254</id>
-      <componentname>teachpals-task-solo</componentname>
-      <flavorname>boy</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Gd.svg</iconurl>
-    </row>
-    <row>
-      <id>255</id>
-      <componentname>teachpals-task-solo</componentname>
-      <flavorname>listen</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/55f.svg</iconurl>
-    </row>
-    <row>
-      <id>256</id>
-      <componentname>teachpals-task-solo</componentname>
-      <flavorname>girl</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/6f.svg</iconurl>
-    </row>
-    <row>
-      <id>257</id>
-      <componentname>teachpals-task-solo</componentname>
-      <flavorname>bikesafety</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Ag.svg</iconurl>
-    </row>
-    <row>
       <id>258</id>
       <componentname>just-boxes-task</componentname>
       <flavorname>justboxes1</flavorname>
@@ -5395,88 +4820,976 @@ border: 2px solid #b5b5b5;
       <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/3/noun_project_icons/c4l_estimatedtime_icon.svg</iconurl>
     </row>
     <row>
-      <id>265</id>
+      <id>278</id>
+      <componentname>just-boxes-title</componentname>
+      <flavorname>justboxes1</flavorname>
+      <iconurl></iconurl>
+    </row>
+    <row>
+      <id>287</id>
+      <componentname>teachpals-tip</componentname>
+      <flavorname>horst-cloud</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Horsti-tip%20.svg</iconurl>
+    </row>
+    <row>
+      <id>288</id>
+      <componentname>teachpals-tip</componentname>
+      <flavorname>robi-bot</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Robi-tip.svg</iconurl>
+    </row>
+    <row>
+      <id>289</id>
+      <componentname>teachpals-tip</componentname>
+      <flavorname>teacherpair1</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/W-tip.svg</iconurl>
+    </row>
+    <row>
+      <id>290</id>
+      <componentname>teachpals-tip</componentname>
+      <flavorname>teacherpair2</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/M-tip.svg</iconurl>
+    </row>
+    <row>
+      <id>291</id>
+      <componentname>teachpals-tip</componentname>
+      <flavorname>gert-gisela</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Bavaria-tip.svg</iconurl>
+    </row>
+    <row>
+      <id>292</id>
+      <componentname>teachpals-tip</componentname>
+      <flavorname>marie-claude</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Marie-tip.svg</iconurl>
+    </row>
+    <row>
+      <id>293</id>
+      <componentname>teachpals-tip</componentname>
+      <flavorname>maggie-john</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Maggie-tip.svg</iconurl>
+    </row>
+    <row>
+      <id>294</id>
+      <componentname>teachpals-tip</componentname>
+      <flavorname>isabel-alejandro</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Spain-tip.svg</iconurl>
+    </row>
+    <row>
+      <id>308</id>
+      <componentname>teachpals-tip-solo</componentname>
+      <flavorname>read</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/44g.svg</iconurl>
+    </row>
+    <row>
+      <id>309</id>
+      <componentname>teachpals-tip-solo</componentname>
+      <flavorname>boy</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Ge.svg</iconurl>
+    </row>
+    <row>
+      <id>310</id>
+      <componentname>teachpals-tip-solo</componentname>
+      <flavorname>listen</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/55d.svg</iconurl>
+    </row>
+    <row>
+      <id>311</id>
+      <componentname>teachpals-tip-solo</componentname>
+      <flavorname>girl</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/6b.svg</iconurl>
+    </row>
+    <row>
+      <id>312</id>
+      <componentname>teachpals-tip-solo</componentname>
+      <flavorname>bikesafety</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Af.svg</iconurl>
+    </row>
+    <row>
+      <id>321</id>
+      <componentname>teachpals-scenario</componentname>
+      <flavorname>horst-cloud</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Horsti-szenario.svg</iconurl>
+    </row>
+    <row>
+      <id>322</id>
+      <componentname>teachpals-scenario</componentname>
+      <flavorname>robi-bot</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Robi-szenario.svg</iconurl>
+    </row>
+    <row>
+      <id>323</id>
+      <componentname>teachpals-scenario</componentname>
+      <flavorname>teacherpair1</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/W-szenario.svg</iconurl>
+    </row>
+    <row>
+      <id>324</id>
+      <componentname>teachpals-scenario</componentname>
+      <flavorname>teacherpair2</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/M-szenario.svg</iconurl>
+    </row>
+    <row>
+      <id>325</id>
+      <componentname>teachpals-scenario</componentname>
+      <flavorname>gert-gisela</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Bavaria-szenario.svg</iconurl>
+    </row>
+    <row>
+      <id>326</id>
+      <componentname>teachpals-scenario</componentname>
+      <flavorname>marie-claude</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Marie-szenario.svg</iconurl>
+    </row>
+    <row>
+      <id>327</id>
+      <componentname>teachpals-scenario</componentname>
+      <flavorname>maggie-john</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Maggie-szenario.svg</iconurl>
+    </row>
+    <row>
+      <id>328</id>
+      <componentname>teachpals-scenario</componentname>
+      <flavorname>isabel-alejandro</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Spain-szenario.svg</iconurl>
+    </row>
+    <row>
+      <id>329</id>
+      <componentname>teachpals-scenario-solo</componentname>
+      <flavorname>read</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/44b.svg</iconurl>
+    </row>
+    <row>
+      <id>330</id>
+      <componentname>teachpals-scenario-solo</componentname>
+      <flavorname>boy</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Gb.svg</iconurl>
+    </row>
+    <row>
+      <id>331</id>
+      <componentname>teachpals-scenario-solo</componentname>
+      <flavorname>listen</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/55c.svg</iconurl>
+    </row>
+    <row>
+      <id>332</id>
+      <componentname>teachpals-scenario-solo</componentname>
+      <flavorname>girl</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/6z.svg</iconurl>
+    </row>
+    <row>
+      <id>333</id>
+      <componentname>teachpals-scenario-solo</componentname>
+      <flavorname>bikesafety</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Ab.svg</iconurl>
+    </row>
+    <row>
+      <id>334</id>
+      <componentname>teachpals-problem</componentname>
+      <flavorname>horst-cloud</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Horsti-frage%20.svg</iconurl>
+    </row>
+    <row>
+      <id>335</id>
+      <componentname>teachpals-problem</componentname>
+      <flavorname>robi-bot</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Robi-question.svg</iconurl>
+    </row>
+    <row>
+      <id>336</id>
+      <componentname>teachpals-problem</componentname>
+      <flavorname>teacherpair1</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/W-problem.svg</iconurl>
+    </row>
+    <row>
+      <id>337</id>
+      <componentname>teachpals-problem</componentname>
+      <flavorname>teacherpair2</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/M-frage.svg</iconurl>
+    </row>
+    <row>
+      <id>338</id>
+      <componentname>teachpals-problem</componentname>
+      <flavorname>gert-gisela</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Bavaria-problem.svg</iconurl>
+    </row>
+    <row>
+      <id>339</id>
+      <componentname>teachpals-problem</componentname>
+      <flavorname>marie-claude</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Marie-problem.svg</iconurl>
+    </row>
+    <row>
+      <id>340</id>
+      <componentname>teachpals-problem</componentname>
+      <flavorname>maggie-john</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Maggie-problem.svg</iconurl>
+    </row>
+    <row>
+      <id>341</id>
+      <componentname>teachpals-problem</componentname>
+      <flavorname>isabel-alejandro</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Spain-frage.svg</iconurl>
+    </row>
+    <row>
+      <id>342</id>
+      <componentname>teachpals-problem-solo</componentname>
+      <flavorname>read</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/44f.svg</iconurl>
+    </row>
+    <row>
+      <id>343</id>
+      <componentname>teachpals-problem-solo</componentname>
+      <flavorname>boy</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Gg.svg</iconurl>
+    </row>
+    <row>
+      <id>344</id>
+      <componentname>teachpals-problem-solo</componentname>
+      <flavorname>listen</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/55e.svg</iconurl>
+    </row>
+    <row>
+      <id>345</id>
+      <componentname>teachpals-problem-solo</componentname>
+      <flavorname>girl</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/6g.svg</iconurl>
+    </row>
+    <row>
+      <id>346</id>
+      <componentname>teachpals-problem-solo</componentname>
+      <flavorname>bikesafety</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Ae.svg</iconurl>
+    </row>
+    <row>
+      <id>347</id>
+      <componentname>teachpals-do</componentname>
+      <flavorname>horst-cloud</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Horsti-do.svg</iconurl>
+    </row>
+    <row>
+      <id>348</id>
+      <componentname>teachpals-do</componentname>
+      <flavorname>robi-bot</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Robi-do.svg</iconurl>
+    </row>
+    <row>
+      <id>349</id>
+      <componentname>teachpals-do</componentname>
+      <flavorname>teacherpair1</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/W-do.svg</iconurl>
+    </row>
+    <row>
+      <id>350</id>
+      <componentname>teachpals-do</componentname>
+      <flavorname>teacherpair2</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/M-do.svg</iconurl>
+    </row>
+    <row>
+      <id>351</id>
+      <componentname>teachpals-do</componentname>
+      <flavorname>gert-gisela</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Bavaria-do.svg</iconurl>
+    </row>
+    <row>
+      <id>352</id>
+      <componentname>teachpals-do</componentname>
+      <flavorname>marie-claude</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Marie-do.svg</iconurl>
+    </row>
+    <row>
+      <id>353</id>
+      <componentname>teachpals-do</componentname>
+      <flavorname>maggie-john</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Maggie-do.svg</iconurl>
+    </row>
+    <row>
+      <id>354</id>
+      <componentname>teachpals-do</componentname>
+      <flavorname>isabel-alejandro</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Spain-do.svg</iconurl>
+    </row>
+    <row>
+      <id>355</id>
       <componentname>teachpals-do-solo</componentname>
       <flavorname>read</flavorname>
       <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/44e.svg</iconurl>
     </row>
     <row>
-      <id>266</id>
+      <id>356</id>
       <componentname>teachpals-do-solo</componentname>
       <flavorname>boy</flavorname>
       <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Gc.svg</iconurl>
     </row>
     <row>
-      <id>267</id>
+      <id>357</id>
       <componentname>teachpals-do-solo</componentname>
       <flavorname>listen</flavorname>
       <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/55b.svg</iconurl>
     </row>
     <row>
-      <id>268</id>
+      <id>358</id>
       <componentname>teachpals-do-solo</componentname>
       <flavorname>girl</flavorname>
       <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/6c.svg</iconurl>
     </row>
     <row>
-      <id>269</id>
+      <id>359</id>
       <componentname>teachpals-do-solo</componentname>
       <flavorname>bikesafety</flavorname>
       <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Ad.svg</iconurl>
     </row>
     <row>
-      <id>270</id>
-      <componentname>culturalpals-task</componentname>
+      <id>360</id>
+      <componentname>teachpals-dontdo</componentname>
+      <flavorname>horst-cloud</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Horsti-dontdo%20.svg</iconurl>
+    </row>
+    <row>
+      <id>361</id>
+      <componentname>teachpals-dontdo</componentname>
+      <flavorname>robi-bot</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Robi-dontdo.svg</iconurl>
+    </row>
+    <row>
+      <id>362</id>
+      <componentname>teachpals-dontdo</componentname>
+      <flavorname>teacherpair1</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/W-dontdo.svg</iconurl>
+    </row>
+    <row>
+      <id>363</id>
+      <componentname>teachpals-dontdo</componentname>
+      <flavorname>teacherpair2</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/M-dontdo.svg</iconurl>
+    </row>
+    <row>
+      <id>364</id>
+      <componentname>teachpals-dontdo</componentname>
+      <flavorname>gert-gisela</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Bavaria-dontdo.svg</iconurl>
+    </row>
+    <row>
+      <id>365</id>
+      <componentname>teachpals-dontdo</componentname>
+      <flavorname>marie-claude</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Marie-dontdo.svg</iconurl>
+    </row>
+    <row>
+      <id>366</id>
+      <componentname>teachpals-dontdo</componentname>
+      <flavorname>maggie-john</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Maggie-dontdo.svg</iconurl>
+    </row>
+    <row>
+      <id>367</id>
+      <componentname>teachpals-dontdo</componentname>
+      <flavorname>isabel-alejandro</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Spain-dontdo.svg</iconurl>
+    </row>
+    <row>
+      <id>368</id>
+      <componentname>teachpals-dontdo-solo</componentname>
+      <flavorname>read</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/44h.svg</iconurl>
+    </row>
+    <row>
+      <id>369</id>
+      <componentname>teachpals-dontdo-solo</componentname>
+      <flavorname>boy</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Gh.svg</iconurl>
+    </row>
+    <row>
+      <id>370</id>
+      <componentname>teachpals-dontdo-solo</componentname>
+      <flavorname>listen</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/55g.svg</iconurl>
+    </row>
+    <row>
+      <id>371</id>
+      <componentname>teachpals-dontdo-solo</componentname>
+      <flavorname>girl</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/6h.svg</iconurl>
+    </row>
+    <row>
+      <id>372</id>
+      <componentname>teachpals-dontdo-solo</componentname>
+      <flavorname>bikesafety</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Ah.svg</iconurl>
+    </row>
+    <row>
+      <id>373</id>
+      <componentname>teachpals-feedback</componentname>
+      <flavorname>horst-cloud</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Horsti-like.svg</iconurl>
+    </row>
+    <row>
+      <id>374</id>
+      <componentname>teachpals-feedback</componentname>
+      <flavorname>robi-bot</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Robi-like.svg</iconurl>
+    </row>
+    <row>
+      <id>375</id>
+      <componentname>teachpals-feedback</componentname>
+      <flavorname>teacherpair1</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/W1-feedback.svg</iconurl>
+    </row>
+    <row>
+      <id>376</id>
+      <componentname>teachpals-feedback</componentname>
+      <flavorname>teacherpair2</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/M-feedback.svg</iconurl>
+    </row>
+    <row>
+      <id>377</id>
+      <componentname>teachpals-feedback</componentname>
+      <flavorname>gert-gisela</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Bavaria-feedback.svg</iconurl>
+    </row>
+    <row>
+      <id>378</id>
+      <componentname>teachpals-feedback</componentname>
+      <flavorname>marie-claude</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Marie-feedback.svg</iconurl>
+    </row>
+    <row>
+      <id>379</id>
+      <componentname>teachpals-feedback</componentname>
+      <flavorname>maggie-john</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Maggie-feedback.svg</iconurl>
+    </row>
+    <row>
+      <id>380</id>
+      <componentname>teachpals-feedback</componentname>
+      <flavorname>isabel-alejandro</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Spain-feedback.svg</iconurl>
+    </row>
+    <row>
+      <id>381</id>
+      <componentname>teachpals-feedback1-solo</componentname>
+      <flavorname>read</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/44c.svg</iconurl>
+    </row>
+    <row>
+      <id>382</id>
+      <componentname>teachpals-feedback1-solo</componentname>
+      <flavorname>boy</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Gf.svg</iconurl>
+    </row>
+    <row>
+      <id>383</id>
+      <componentname>teachpals-feedback1-solo</componentname>
+      <flavorname>listen</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/55h.svg</iconurl>
+    </row>
+    <row>
+      <id>384</id>
+      <componentname>teachpals-feedback1-solo</componentname>
+      <flavorname>girl</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/6e.svg</iconurl>
+    </row>
+    <row>
+      <id>385</id>
+      <componentname>teachpals-feedback1-solo</componentname>
+      <flavorname>bikesafety</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Ac.svg</iconurl>
+    </row>
+    <row>
+      <id>386</id>
+      <componentname>teachpals-task</componentname>
+      <flavorname>horst-cloud</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Horsti-task.svg</iconurl>
+    </row>
+    <row>
+      <id>387</id>
+      <componentname>teachpals-task</componentname>
+      <flavorname>robi-bot</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Robi-task.svg</iconurl>
+    </row>
+    <row>
+      <id>388</id>
+      <componentname>teachpals-task</componentname>
+      <flavorname>teacherpair1</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/W-task.svg</iconurl>
+    </row>
+    <row>
+      <id>389</id>
+      <componentname>teachpals-task</componentname>
+      <flavorname>teacherpair2</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/M-task.svg</iconurl>
+    </row>
+    <row>
+      <id>390</id>
+      <componentname>teachpals-task</componentname>
+      <flavorname>gert-gisela</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Bavaria-task.svg</iconurl>
+    </row>
+    <row>
+      <id>391</id>
+      <componentname>teachpals-task</componentname>
+      <flavorname>marie-claude</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Marie-task.svg</iconurl>
+    </row>
+    <row>
+      <id>392</id>
+      <componentname>teachpals-task</componentname>
+      <flavorname>maggie-john</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Maggie-task.svg</iconurl>
+    </row>
+    <row>
+      <id>393</id>
+      <componentname>teachpals-task</componentname>
+      <flavorname>isabel-alejandro</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Spain-task.svg</iconurl>
+    </row>
+    <row>
+      <id>394</id>
+      <componentname>teachpals-task-solo</componentname>
+      <flavorname>read</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/44d.svg</iconurl>
+    </row>
+    <row>
+      <id>395</id>
+      <componentname>teachpals-task-solo</componentname>
+      <flavorname>boy</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Gd.svg</iconurl>
+    </row>
+    <row>
+      <id>396</id>
+      <componentname>teachpals-task-solo</componentname>
+      <flavorname>listen</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/55f.svg</iconurl>
+    </row>
+    <row>
+      <id>397</id>
+      <componentname>teachpals-task-solo</componentname>
+      <flavorname>girl</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/6f.svg</iconurl>
+    </row>
+    <row>
+      <id>398</id>
+      <componentname>teachpals-task-solo</componentname>
+      <flavorname>bikesafety</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Ag.svg</iconurl>
+    </row>
+    <row>
+      <id>451</id>
+      <componentname>teachpals-title</componentname>
+      <flavorname>horst-cloud</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Horsti-titel%20.svg</iconurl>
+    </row>
+    <row>
+      <id>452</id>
+      <componentname>teachpals-title</componentname>
+      <flavorname>robi-bot</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Robi-titel.svg</iconurl>
+    </row>
+    <row>
+      <id>453</id>
+      <componentname>teachpals-title</componentname>
+      <flavorname>read</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/44a.svg</iconurl>
+    </row>
+    <row>
+      <id>454</id>
+      <componentname>teachpals-title</componentname>
+      <flavorname>boy</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Ga.svg</iconurl>
+    </row>
+    <row>
+      <id>455</id>
+      <componentname>teachpals-title</componentname>
+      <flavorname>listen</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/55a1.svg</iconurl>
+    </row>
+    <row>
+      <id>456</id>
+      <componentname>teachpals-title</componentname>
+      <flavorname>girl</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/6a.svg</iconurl>
+    </row>
+    <row>
+      <id>457</id>
+      <componentname>teachpals-title</componentname>
+      <flavorname>bikesafety</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Aa.svg</iconurl>
+    </row>
+    <row>
+      <id>458</id>
+      <componentname>teachpals-title</componentname>
+      <flavorname>teacherpair1</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/W-titel.svg</iconurl>
+    </row>
+    <row>
+      <id>459</id>
+      <componentname>teachpals-title</componentname>
+      <flavorname>teacherpair2</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/M-titel.svg</iconurl>
+    </row>
+    <row>
+      <id>460</id>
+      <componentname>teachpals-title</componentname>
+      <flavorname>gert-gisela</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Bavaria-titel.svg</iconurl>
+    </row>
+    <row>
+      <id>461</id>
+      <componentname>teachpals-title</componentname>
+      <flavorname>marie-claude</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Marie-titel.svg</iconurl>
+    </row>
+    <row>
+      <id>462</id>
+      <componentname>teachpals-title</componentname>
+      <flavorname>maggie-john</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Maggie-titel.svg</iconurl>
+    </row>
+    <row>
+      <id>463</id>
+      <componentname>teachpals-title</componentname>
+      <flavorname>isabel-alejandro</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/Titel.svg</iconurl>
+    </row>
+    <row>
+      <id>464</id>
+      <componentname>culturalpals-tip</componentname>
       <flavorname>bavaria</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Dh.svg</iconurl>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Dd.svg</iconurl>
     </row>
     <row>
-      <id>271</id>
-      <componentname>culturalpals-task</componentname>
+      <id>465</id>
+      <componentname>culturalpals-tip</componentname>
       <flavorname>germany</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Cd.svg</iconurl>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Ch.svg</iconurl>
     </row>
     <row>
-      <id>272</id>
-      <componentname>culturalpals-task</componentname>
+      <id>466</id>
+      <componentname>culturalpals-tip</componentname>
       <flavorname>europe</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Europe-task.svg</iconurl>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Eh.svg</iconurl>
     </row>
     <row>
-      <id>273</id>
-      <componentname>culturalpals-task</componentname>
+      <id>467</id>
+      <componentname>culturalpals-tip</componentname>
       <flavorname>community</flavorname>
-      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Fg.svg</iconurl>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Fh.svg</iconurl>
     </row>
     <row>
-      <id>274</id>
+      <id>468</id>
       <componentname>culturalpals-scenario</componentname>
       <flavorname>bavaria</flavorname>
       <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Db.svg</iconurl>
     </row>
     <row>
-      <id>275</id>
+      <id>469</id>
       <componentname>culturalpals-scenario</componentname>
       <flavorname>germany</flavorname>
       <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Cb.svg</iconurl>
     </row>
     <row>
-      <id>276</id>
+      <id>470</id>
       <componentname>culturalpals-scenario</componentname>
       <flavorname>europe</flavorname>
       <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Eb.svg</iconurl>
     </row>
     <row>
-      <id>277</id>
+      <id>471</id>
       <componentname>culturalpals-scenario</componentname>
       <flavorname>community</flavorname>
       <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Fb.svg</iconurl>
     </row>
     <row>
-      <id>278</id>
-      <componentname>just-boxes-title</componentname>
-      <flavorname>justboxes1</flavorname>
+      <id>472</id>
+      <componentname>culturalpals-problem</componentname>
+      <flavorname>bavaria</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Dg.svg</iconurl>
+    </row>
+    <row>
+      <id>473</id>
+      <componentname>culturalpals-problem</componentname>
+      <flavorname>germany</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Cg.svg</iconurl>
+    </row>
+    <row>
+      <id>474</id>
+      <componentname>culturalpals-problem</componentname>
+      <flavorname>europe</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Eg.svg</iconurl>
+    </row>
+    <row>
+      <id>475</id>
+      <componentname>culturalpals-problem</componentname>
+      <flavorname>community</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Ff.svg</iconurl>
+    </row>
+    <row>
+      <id>476</id>
+      <componentname>culturalpals-do</componentname>
+      <flavorname>bavaria</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/De.svg</iconurl>
+    </row>
+    <row>
+      <id>477</id>
+      <componentname>culturalpals-do</componentname>
+      <flavorname>germany</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Ce.svg</iconurl>
+    </row>
+    <row>
+      <id>478</id>
+      <componentname>culturalpals-do</componentname>
+      <flavorname>europe</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Ef.svg</iconurl>
+    </row>
+    <row>
+      <id>479</id>
+      <componentname>culturalpals-do</componentname>
+      <flavorname>community</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Fd.svg</iconurl>
+    </row>
+    <row>
+      <id>480</id>
+      <componentname>culturalpals-dontdo</componentname>
+      <flavorname>bavaria</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Df.svg</iconurl>
+    </row>
+    <row>
+      <id>481</id>
+      <componentname>culturalpals-dontdo</componentname>
+      <flavorname>germany</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Cf.svg</iconurl>
+    </row>
+    <row>
+      <id>482</id>
+      <componentname>culturalpals-dontdo</componentname>
+      <flavorname>europe</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Ed.svg</iconurl>
+    </row>
+    <row>
+      <id>483</id>
+      <componentname>culturalpals-dontdo</componentname>
+      <flavorname>community</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Fe.svg</iconurl>
+    </row>
+    <row>
+      <id>484</id>
+      <componentname>culturalpals-feedback1</componentname>
+      <flavorname>bavaria</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Dc.svg</iconurl>
+    </row>
+    <row>
+      <id>485</id>
+      <componentname>culturalpals-feedback1</componentname>
+      <flavorname>germany</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Cc.svg</iconurl>
+    </row>
+    <row>
+      <id>486</id>
+      <componentname>culturalpals-feedback1</componentname>
+      <flavorname>europe</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Ec.svg</iconurl>
+    </row>
+    <row>
+      <id>487</id>
+      <componentname>culturalpals-feedback1</componentname>
+      <flavorname>community</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Fc.svg</iconurl>
+    </row>
+    <row>
+      <id>488</id>
+      <componentname>culturalpals-task</componentname>
+      <flavorname>bavaria</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Dh.svg</iconurl>
+    </row>
+    <row>
+      <id>489</id>
+      <componentname>culturalpals-task</componentname>
+      <flavorname>germany</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Cd.svg</iconurl>
+    </row>
+    <row>
+      <id>490</id>
+      <componentname>culturalpals-task</componentname>
+      <flavorname>europe</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Europe-task.svg</iconurl>
+    </row>
+    <row>
+      <id>491</id>
+      <componentname>culturalpals-task</componentname>
+      <flavorname>community</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Fg.svg</iconurl>
+    </row>
+    <row>
+      <id>492</id>
+      <componentname>culturalpals-title</componentname>
+      <flavorname>bavaria</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Da.svg</iconurl>
+    </row>
+    <row>
+      <id>493</id>
+      <componentname>culturalpals-title</componentname>
+      <flavorname>germany</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Ca.svg</iconurl>
+    </row>
+    <row>
+      <id>494</id>
+      <componentname>culturalpals-title</componentname>
+      <flavorname>europe</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/Ea.svg</iconurl>
+    </row>
+    <row>
+      <id>495</id>
+      <componentname>culturalpals-title</componentname>
+      <flavorname>community</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/F1.svg</iconurl>
+    </row>
+    <row>
+      <id>501</id>
+      <componentname>sketchpals-hummingbird</componentname>
+      <flavorname>break</flavorname>
       <iconurl></iconurl>
+    </row>
+    <row>
+      <id>508</id>
+      <componentname>sketchpals-coffeebreak</componentname>
+      <flavorname>break</flavorname>
+      <iconurl></iconurl>
+    </row>
+    <row>
+      <id>509</id>
+      <componentname>sketchpals-cat</componentname>
+      <flavorname>break</flavorname>
+      <iconurl></iconurl>
+    </row>
+    <row>
+      <id>510</id>
+      <componentname>sketchpals-wolken</componentname>
+      <flavorname>break</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/2/Wolken.svg</iconurl>
+    </row>
+    <row>
+      <id>511</id>
+      <componentname>sketchpals-hangematte</componentname>
+      <flavorname>break</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/2/Ha%CC%88ngematte.svg</iconurl>
+    </row>
+    <row>
+      <id>512</id>
+      <componentname>sketchpals-lesepause</componentname>
+      <flavorname>break</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/2/Buch3.svg</iconurl>
+    </row>
+    <row>
+      <id>513</id>
+      <componentname>sketchpals-raus</componentname>
+      <flavorname>break</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/2/Baum.svg</iconurl>
+    </row>
+    <row>
+      <id>515</id>
+      <componentname>sketchpals-blume</componentname>
+      <flavorname>break</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/2/Blume.svg</iconurl>
+    </row>
+    <row>
+      <id>540</id>
+      <componentname>sketchpals-reflexion</componentname>
+      <flavorname>project</flavorname>
+      <iconurl></iconurl>
+    </row>
+    <row>
+      <id>541</id>
+      <componentname>sketchpals-team</componentname>
+      <flavorname>project</flavorname>
+      <iconurl></iconurl>
+    </row>
+    <row>
+      <id>542</id>
+      <componentname>sketchpals-rueckblick</componentname>
+      <flavorname>project</flavorname>
+      <iconurl></iconurl>
+    </row>
+    <row>
+      <id>543</id>
+      <componentname>sketchpals-probleme</componentname>
+      <flavorname>project</flavorname>
+      <iconurl></iconurl>
+    </row>
+    <row>
+      <id>544</id>
+      <componentname>sketchpals-flow</componentname>
+      <flavorname>project</flavorname>
+      <iconurl></iconurl>
+    </row>
+    <row>
+      <id>545</id>
+      <componentname>sketchpals-rollen</componentname>
+      <flavorname>project</flavorname>
+      <iconurl></iconurl>
+    </row>
+    <row>
+      <id>546</id>
+      <componentname>sketchpals-ideensammeln</componentname>
+      <flavorname>project</flavorname>
+      <iconurl></iconurl>
+    </row>
+    <row>
+      <id>551</id>
+      <componentname>sketchpals-fortschritt</componentname>
+      <flavorname>project</flavorname>
+      <iconurl></iconurl>
+    </row>
+    <row>
+      <id>552</id>
+      <componentname>sketchpals-planstarten</componentname>
+      <flavorname>project</flavorname>
+      <iconurl></iconurl>
+    </row>
+    <row>
+      <id>553</id>
+      <componentname>sketchpals-boardoeffnen</componentname>
+      <flavorname>project</flavorname>
+      <iconurl></iconurl>
+    </row>
+    <row>
+      <id>561</id>
+      <componentname>skills-feedback</componentname>
+      <flavorname>miscellaneous</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/6/4gg.svg</iconurl>
+    </row>
+    <row>
+      <id>562</id>
+      <componentname>skills-feedback</componentname>
+      <flavorname>spell</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/6/33c.svg</iconurl>
+    </row>
+    <row>
+      <id>563</id>
+      <componentname>skills-feedback</componentname>
+      <flavorname>write</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/6/22c.svg</iconurl>
+    </row>
+    <row>
+      <id>564</id>
+      <componentname>skills-feedback</componentname>
+      <flavorname>eye</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/6/6hh.svg</iconurl>
+    </row>
+    <row>
+      <id>565</id>
+      <componentname>skills-feedback</componentname>
+      <flavorname>media</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/6/1aa.svg</iconurl>
+    </row>
+    <row>
+      <id>566</id>
+      <componentname>skills-feedback</componentname>
+      <flavorname>linguistics</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/6/11.svg</iconurl>
+    </row>
+    <row>
+      <id>567</id>
+      <componentname>skills-feedback</componentname>
+      <flavorname>electricity</flavorname>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/6/5ff.svg</iconurl>
     </row>
   </tiny_elements_comp_flavor>
   <tiny_elements_flavor>
@@ -6979,145 +7292,115 @@ background-image: url('@@PLUGINFILE@@/1/tiny_elements/images/4/Spain1-szenario.s
       <categoryname>just-boxes</categoryname>
       <displayorder>1</displayorder>
       <content></content>
-      <css>.elements-boxes {
+      <css>/* ========== GRUNDSTIL ========== */
+.elements-boxes {
   border-radius: 20px;
   border: 2px solid #e0e0e0;
   padding: 24px 60px 24px 24px;
   margin: 50px auto;
   max-width: 90%;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-  font-family: "Inter", sans-serif;
+  font-family: "Helvetica", sans-serif;
   font-size: 18px;
-  position: relative;
-  background-color: #ffffff;
-  box-sizing: border-box;
   text-align: left;
+  background-color: #ffffff;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  position: relative;
+  box-sizing: border-box;
   overflow: visible;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
 }
 
-/* Desktop: Icon in der oberen rechten Ecke */
+/* ========== ICON OBEN RECHTS ========== */
 .elements-boxes::before {
   content: "";
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   position: absolute;
   top: -45px;
   right: -25px;
-  z-index: 1;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
- }
-
-
-
-
-/* Border-Styles für die verschiedenen Klassen - da können dann in Version 2 oder so bunte dicke Rahen gemacht werden oder ein farbiger Hintergrund! */
-.elements-boxes.elements-boxes-feedback {
-  border-color: #f6f6f6;
-  border: 2px solid #e0e0e0;
-}
-.elements-boxes.elements-boxes-tip{
-  border-color: #f6f6f6;
-  border: 2px solid #e0e0e0;
+  z-index: 1;
 }
 
-
-.elements-boxes.elements-boxes-scenario {
+/* ========== VARIANTEN (Border-Styles) ========== */
+.elements-boxes-feedback,
+.elements-boxes-tip,
+.elements-boxes-scenario,
+.elements-boxes-dontdo,
+.elements-boxes-do,
+.elements-boxes-task,
+.elements-boxes-problem {
   border-color: #f6f6f6;
   border: 2px solid #e0e0e0;
 }
 
-.elements-boxes.elements-boxes-dontdo {
-  border-color: #f6f6f6;
-  border: 2px solid #e0e0e0;
-}
-
-.elements-boxes.elements-boxes-do {
-  border-color: #f6f6f6;
-  border: 2px solid #e0e0e0;
-}
-
-
-.elements-boxes.elements-boxes-task {
-  border-color: #f6f6f6;
-  border: 2px solid #e0e0e0;
-}
-
-.elements-boxes.elements-boxes-problem {
-  border-color: #f6f6f6;
-  border: 2px solid #e0e0e0;
-}
-
-/* Responsive Design für Tablets */
-@media screen (max-width: 768px) {
+/* ========== RESPONSIVE: TABLET ========== */
+@media screen and (max-width: 768px) {
   .elements-boxes {
     font-size: 16px;
-    padding: 20px 24px 24px; 
+    padding: 20px 20px 24px 20px;
   }
+
   .elements-boxes::before {
-    width: 55px;
-    height: 55px;
-    top: -30px;
-    left: 50%;
-    right: auto;
-    transform: translateX(-50%) rotate(15deg);
+    width: 75px;
+    height: 75px;
+    top: -40px;
+    right: -20px;
+    transform: none;
   }
-  .elements-boxes.elements-boxes-tip::before,
-  .elements-boxes.elements-boxes-problem::before,
-  .elements-boxes.elements-boxes-task::before {
-    width: 50px;
-    height: 50px;
-    top: -25px;
-    left: 50%;
-    transform: translateX(-50%) rotate(0deg);
+
+  .elements-boxes-feedback,
+.elements-boxes-tip::before,
+.elements-boxes-scenario::before,
+.elements-boxes-dontdo::before,
+.elements-boxes-do::before,
+.elements-boxes-task::before,
+.elements-boxes-problem::before {
+    width: 60px;
+    height: 60px;
+    top: -35px;
+    right: -18px;
+    transform: none;
   }
 }
 
-
+/* ========== RESPONSIVE: MOBILE ========== */
 @media screen and (max-width: 480px) {
   .elements-boxes {
     font-size: 14px;
-    padding: 20px 12px 24px 12px;
-    text-align: left;
-    position: relative;
+    padding: 20px 15px 24px 15px;
   }
 
   .elements-boxes::before {
-    content: "";
-    width: 50px;
-    height: 50px;
-    top: -25px;
-    left: 50%;
-    right: auto;
-    transform: translateX(-50%) rotate(15deg);
-    position: absolute;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    z-index: 1;
+    width: 65px;
+    height: 65px;
+    top: -35px;
+    right: -15px;
+    transform: none;
   }
-
-  .elements-boxes.elements-boxes-tip::before,
-  .elements-boxes.elements-boxes-problem::before,
-  .elements-boxes.elements-boxes-task::before,
-  .elements-boxes.elements-boxes-scenario::before,
-  .elements-boxes.elements-boxes-do::before,
-  .elements-boxes.elements-boxes-dontdo::before,
-  .elements-boxes.elements-boxes-feedback::before {
-    width: 45px;
-    height: 45px;
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%) rotate(0deg);
+  .elements-boxes-feedback,
+.elements-boxes-tip::before,
+.elements-boxes-scenario::before,
+.elements-boxes-dontdo::before,
+.elements-boxes-do::before,
+.elements-boxes-task::before,
+.elements-boxes-problem::before {
+    width: 55px;
+    height: 55px;
+    top: -30px;
+    right: -12px;
+    transform: none;
   }
 }
 </css>
       <hideforstudents>0</hideforstudents>
       <timecreated>1739428474</timecreated>
-      <timemodified>1744885419</timemodified>
+      <timemodified>1745387709</timemodified>
     </row>
     <row>
       <id>35</id>
@@ -7247,6 +7530,84 @@ background-image: url('@@PLUGINFILE@@/1/tiny_elements/images/4/W1-szenario.svg')
       <timecreated>1740298329</timecreated>
       <timemodified>1740552061</timemodified>
     </row>
+    <row>
+      <id>37</id>
+      <name>break</name>
+      <displayname>☕️  Pause machen</displayname>
+      <categoryname>sketchpals</categoryname>
+      <displayorder>5</displayorder>
+      <content></content>
+      <css>/* Kaffeepause*/
+.elements-sketchpals-box.elements-sketchpals-coffeebreak::before {
+  background-image: url('@@PLUGINFILE@@/1/tiny_elements/images/2/Kaffeepause.svg');
+}
+.elements-sketchpals-box.elements-sketchpals-hummingbird::before {
+  background-image: url('@@PLUGINFILE@@/1/tiny_elements/images/2/Kolibri.svg');
+}
+
+.elements-sketchpals-box.elements-sketchpals-cat::before {
+  background-image: url('@@PLUGINFILE@@/1/tiny_elements/images/2/Katze.svg');
+}
+.elements-sketchpals-box.elements-sketchpals-wolken::before {
+  background-image: url('@@PLUGINFILE@@/1/tiny_elements/images/2/Wolken.svg');
+}
+
+.elements-sketchpals-box.elements-sketchpals-hangematte::before {
+  background-image: url('@@PLUGINFILE@@/1/tiny_elements/images/2/Ha%CC%88ngematte.svg');
+}
+.elements-sketchpals-box.elements-sketchpals-lesepause::before {
+  background-image: url('@@PLUGINFILE@@/1/tiny_elements/images/2/Buch3.svg');
+}
+
+.elements-sketchpals-box.elements-sketchpals-raus::before {
+  background-image: url('@@PLUGINFILE@@/1/tiny_elements/images/2/Baum.svg');
+}
+.elements-sketchpals-box.elements-sketchpals-blume::before {
+  background-image: url('@@PLUGINFILE@@/1/tiny_elements/images/2/Blume.svg');
+}</css>
+      <hideforstudents>0</hideforstudents>
+      <timecreated>1728718391</timecreated>
+      <timemodified>1745317402</timemodified>
+    </row>
+    <row>
+      <id>38</id>
+      <name>project</name>
+      <displayname>🪪Projekt - Kanban</displayname>
+      <categoryname>sketchpals</categoryname>
+      <displayorder>5</displayorder>
+      <content></content>
+      <css>/* Kaffeepause*/
+.elements-sketchpals-box.elements-sketchpals-coffeebreak::before {
+  background-image: url('@@PLUGINFILE@@/1/tiny_elements/images/2/Kaffeepause.svg');
+}
+.elements-sketchpals-box.elements-sketchpals-hummingbird::before {
+  background-image: url('@@PLUGINFILE@@/1/tiny_elements/images/2/Kolibri.svg');
+}
+
+.elements-sketchpals-box.elements-sketchpals-cat::before {
+  background-image: url('@@PLUGINFILE@@/1/tiny_elements/images/2/Katze.svg');
+}
+.elements-sketchpals-box.elements-sketchpals-wolken::before {
+  background-image: url('@@PLUGINFILE@@/1/tiny_elements/images/2/Wolken.svg');
+}
+
+.elements-sketchpals-box.elements-sketchpals-hangematte::before {
+  background-image: url('@@PLUGINFILE@@/1/tiny_elements/images/2/Ha%CC%88ngematte.svg');
+}
+.elements-sketchpals-box.elements-sketchpals-lesepause::before {
+  background-image: url('@@PLUGINFILE@@/1/tiny_elements/images/2/Buch3.svg');
+}
+
+.elements-sketchpals-box.elements-sketchpals-raus::before {
+  background-image: url('@@PLUGINFILE@@/1/tiny_elements/images/2/Baum.svg');
+}
+.elements-sketchpals-box.elements-sketchpals-blume::before {
+  background-image: url('@@PLUGINFILE@@/1/tiny_elements/images/2/Blume.svg');
+}</css>
+      <hideforstudents>0</hideforstudents>
+      <timecreated>1728718391</timecreated>
+      <timemodified>1745351249</timemodified>
+    </row>
   </tiny_elements_flavor>
   <tiny_elements_comp_variant>
     <row>
@@ -7335,11 +7696,6 @@ background-image: url('@@PLUGINFILE@@/1/tiny_elements/images/4/W1-szenario.svg')
       <componentname>readingcontext</componentname>
     </row>
     <row>
-      <id>18</id>
-      <variant>avatar2</variant>
-      <componentname>teachpals-problem</componentname>
-    </row>
-    <row>
       <id>19</id>
       <variant>full-width</variant>
       <componentname>example</componentname>
@@ -7375,16 +7731,6 @@ background-image: url('@@PLUGINFILE@@/1/tiny_elements/images/4/W1-szenario.svg')
       <componentname>tag</componentname>
     </row>
     <row>
-      <id>26</id>
-      <variant>avatar2</variant>
-      <componentname>teachpals-tip</componentname>
-    </row>
-    <row>
-      <id>27</id>
-      <variant>avatar2</variant>
-      <componentname>teachpals-scenario</componentname>
-    </row>
-    <row>
       <id>28</id>
       <variant>full-width</variant>
       <componentname>attention</componentname>
@@ -7408,36 +7754,6 @@ background-image: url('@@PLUGINFILE@@/1/tiny_elements/images/4/W1-szenario.svg')
       <id>32</id>
       <variant>full-width</variant>
       <componentname>dodontcards</componentname>
-    </row>
-    <row>
-      <id>33</id>
-      <variant>modern</variant>
-      <componentname>teachpals-scenario</componentname>
-    </row>
-    <row>
-      <id>34</id>
-      <variant>modern</variant>
-      <componentname>teachpals-problem</componentname>
-    </row>
-    <row>
-      <id>35</id>
-      <variant>modern</variant>
-      <componentname>teachpals-tip-solo</componentname>
-    </row>
-    <row>
-      <id>36</id>
-      <variant>modern</variant>
-      <componentname>teachpals-scenario-solo</componentname>
-    </row>
-    <row>
-      <id>37</id>
-      <variant>modern</variant>
-      <componentname>teachpals-problem-solo</componentname>
-    </row>
-    <row>
-      <id>38</id>
-      <variant>modern</variant>
-      <componentname>teachpals-tip</componentname>
     </row>
     <row>
       <id>39</id>
@@ -7470,11 +7786,6 @@ background-image: url('@@PLUGINFILE@@/1/tiny_elements/images/4/W1-szenario.svg')
       <componentname>learningoutcomes</componentname>
     </row>
     <row>
-      <id>45</id>
-      <variant>modern</variant>
-      <componentname>teachpals-title</componentname>
-    </row>
-    <row>
       <id>46</id>
       <variant>border</variant>
       <componentname>sketchpals-feedback</componentname>
@@ -7483,61 +7794,6 @@ background-image: url('@@PLUGINFILE@@/1/tiny_elements/images/4/W1-szenario.svg')
       <id>47</id>
       <variant>dark</variant>
       <componentname>sketchpals-feedback</componentname>
-    </row>
-    <row>
-      <id>48</id>
-      <variant>modern</variant>
-      <componentname>teachpals-dontdo</componentname>
-    </row>
-    <row>
-      <id>49</id>
-      <variant>avatar2</variant>
-      <componentname>teachpals-dontdo</componentname>
-    </row>
-    <row>
-      <id>50</id>
-      <variant>modern</variant>
-      <componentname>teachpals-dontdo-solo</componentname>
-    </row>
-    <row>
-      <id>51</id>
-      <variant>modern</variant>
-      <componentname>teachpals-do</componentname>
-    </row>
-    <row>
-      <id>52</id>
-      <variant>avatar2</variant>
-      <componentname>teachpals-do</componentname>
-    </row>
-    <row>
-      <id>53</id>
-      <variant>modern</variant>
-      <componentname>teachpals-feedback</componentname>
-    </row>
-    <row>
-      <id>54</id>
-      <variant>avatar2</variant>
-      <componentname>teachpals-feedback</componentname>
-    </row>
-    <row>
-      <id>55</id>
-      <variant>modern</variant>
-      <componentname>teachpals-feedback1-solo</componentname>
-    </row>
-    <row>
-      <id>56</id>
-      <variant>modern</variant>
-      <componentname>teachpals-task</componentname>
-    </row>
-    <row>
-      <id>57</id>
-      <variant>avatar2</variant>
-      <componentname>teachpals-task</componentname>
-    </row>
-    <row>
-      <id>58</id>
-      <variant>modern</variant>
-      <componentname>teachpals-task-solo</componentname>
     </row>
     <row>
       <id>59</id>
@@ -7555,9 +7811,154 @@ background-image: url('@@PLUGINFILE@@/1/tiny_elements/images/4/W1-szenario.svg')
       <componentname>estimatedtime</componentname>
     </row>
     <row>
-      <id>62</id>
+      <id>65</id>
+      <variant>modern</variant>
+      <componentname>teachpals-tip</componentname>
+    </row>
+    <row>
+      <id>66</id>
+      <variant>avatar2</variant>
+      <componentname>teachpals-tip</componentname>
+    </row>
+    <row>
+      <id>68</id>
+      <variant>modern</variant>
+      <componentname>teachpals-tip-solo</componentname>
+    </row>
+    <row>
+      <id>71</id>
+      <variant>modern</variant>
+      <componentname>teachpals-scenario</componentname>
+    </row>
+    <row>
+      <id>72</id>
+      <variant>avatar2</variant>
+      <componentname>teachpals-scenario</componentname>
+    </row>
+    <row>
+      <id>73</id>
+      <variant>modern</variant>
+      <componentname>teachpals-scenario-solo</componentname>
+    </row>
+    <row>
+      <id>74</id>
+      <variant>modern</variant>
+      <componentname>teachpals-problem</componentname>
+    </row>
+    <row>
+      <id>75</id>
+      <variant>avatar2</variant>
+      <componentname>teachpals-problem</componentname>
+    </row>
+    <row>
+      <id>76</id>
+      <variant>modern</variant>
+      <componentname>teachpals-problem-solo</componentname>
+    </row>
+    <row>
+      <id>77</id>
+      <variant>modern</variant>
+      <componentname>teachpals-do</componentname>
+    </row>
+    <row>
+      <id>78</id>
+      <variant>avatar2</variant>
+      <componentname>teachpals-do</componentname>
+    </row>
+    <row>
+      <id>79</id>
       <variant>modern</variant>
       <componentname>teachpals-do-solo</componentname>
+    </row>
+    <row>
+      <id>80</id>
+      <variant>modern</variant>
+      <componentname>teachpals-dontdo</componentname>
+    </row>
+    <row>
+      <id>81</id>
+      <variant>avatar2</variant>
+      <componentname>teachpals-dontdo</componentname>
+    </row>
+    <row>
+      <id>82</id>
+      <variant>modern</variant>
+      <componentname>teachpals-dontdo-solo</componentname>
+    </row>
+    <row>
+      <id>83</id>
+      <variant>modern</variant>
+      <componentname>teachpals-feedback</componentname>
+    </row>
+    <row>
+      <id>84</id>
+      <variant>avatar2</variant>
+      <componentname>teachpals-feedback</componentname>
+    </row>
+    <row>
+      <id>85</id>
+      <variant>modern</variant>
+      <componentname>teachpals-feedback1-solo</componentname>
+    </row>
+    <row>
+      <id>86</id>
+      <variant>modern</variant>
+      <componentname>teachpals-task</componentname>
+    </row>
+    <row>
+      <id>87</id>
+      <variant>avatar2</variant>
+      <componentname>teachpals-task</componentname>
+    </row>
+    <row>
+      <id>88</id>
+      <variant>modern</variant>
+      <componentname>teachpals-task-solo</componentname>
+    </row>
+    <row>
+      <id>93</id>
+      <variant>modern</variant>
+      <componentname>teachpals-title</componentname>
+    </row>
+    <row>
+      <id>94</id>
+      <variant>culturalpals-modern</variant>
+      <componentname>culturalpals-tip</componentname>
+    </row>
+    <row>
+      <id>95</id>
+      <variant>culturalpals-modern</variant>
+      <componentname>culturalpals-scenario</componentname>
+    </row>
+    <row>
+      <id>96</id>
+      <variant>culturalpals-modern</variant>
+      <componentname>culturalpals-problem</componentname>
+    </row>
+    <row>
+      <id>97</id>
+      <variant>culturalpals-modern</variant>
+      <componentname>culturalpals-do</componentname>
+    </row>
+    <row>
+      <id>98</id>
+      <variant>culturalpals-modern</variant>
+      <componentname>culturalpals-dontdo</componentname>
+    </row>
+    <row>
+      <id>99</id>
+      <variant>culturalpals-modern</variant>
+      <componentname>culturalpals-feedback1</componentname>
+    </row>
+    <row>
+      <id>100</id>
+      <variant>culturalpals-modern</variant>
+      <componentname>culturalpals-task</componentname>
+    </row>
+    <row>
+      <id>101</id>
+      <variant>culturalpals-modern</variant>
+      <componentname>culturalpals-title</componentname>
     </row>
   </tiny_elements_comp_variant>
   <tiny_elements_variant>
@@ -7698,36 +8099,36 @@ background-image: url('@@PLUGINFILE@@/1/tiny_elements/images/4/W1-szenario.svg')
 }
 
 .elements-modern-variant.elements-teachpals-box {
-border: none; 
-  border-radius: 18px; 
-  padding: 35px;
-  margin: 50px auto;
+  border: none; 
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); 
-  font-family: "Inter", sans-serif;
-  font-size: 18px;
-  text-align: left;
-  overflow: visible;
-  position: relative;
-  line-height: 1.7;
-  min-width: 320px;
-  max-width: 80%;
-  background: linear-gradient(to bottom right, var(--box-bg-light, #ffffff), var(--box-bg-dark, #f8f8f8));
-  box-sizing: border-box;
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  padding-left: 45px;
-  padding-right: 45px;
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 </css>
       <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/4/border.svg</iconurl>
       <c4lcompatibility>0</c4lcompatibility>
       <timecreated>1740148847</timecreated>
-      <timemodified>1740552035</timemodified>
+      <timemodified>1745224607</timemodified>
     </row>
     <row>
-      <id>10</id>
+      <id>11</id>
+      <name>culturalpals-modern</name>
+      <displayname>kein Rahmen</displayname>
+      <categoryname>culturalpals</categoryname>
+      <content></content>
+      <css>.elements-culturalpals-modern-variant.elements-culturalpals-title-box {
+  border: none;
+}
+
+.elements-culturalpals-modern-variant.elements-culturalpals-box {
+  border: none; 
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); 
+}</css>
+      <iconurl>@@PLUGINFILE@@/1/tiny_elements/images/5/border.svg</iconurl>
+      <c4lcompatibility>0</c4lcompatibility>
+      <timecreated>1745238975</timecreated>
+      <timemodified>1745239802</timemodified>
+    </row>
+    <row>
+      <id>12</id>
       <name>modern-kulturen</name>
       <displayname>ohne Rahmen</displayname>
       <categoryname>culturalpals</categoryname>
